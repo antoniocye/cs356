@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "depcheck": "^1.4.7"
+  }
+}

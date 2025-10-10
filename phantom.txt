@@ -1,0 +1,27 @@
+@boklisten/bl-web: @types/resize-observer-browser node_modules/codelyzer @types/jasminewd2 
+@bokuhe/react-native-qrcode-scanner: react react-native react-native-qrcode-scanner 
+@bokuweb/nightmare-custom-for-karma: nightmare 
+@boldare/openai-assistant: @nx/devkit settings @boldare/openai-assistant @boldare/ai-embedded 
+@boldgrid/components: autoprefixer 
+@boldgrid/controls: @boldgrid/controls @material/checkbox autoprefixer 
+@boldr/auth: react redux 
+@boldr/backend: react redux 
+@boldr/cli: react redux 
+@boldr/config: react redux 
+@boldr/core: react redux 
+@boldr/icons: react redux 
+@boldr/tools: react redux 
+@boldr/ui: autoprefixer @storybook/addon-actions react-docgen doctrine recast 
+@boldr/utils: react redux 
+@boldreports/angular-reporting-components: @types/jquery 
+@boldvideo/bold-js: lib 
+@bolekro/react-loadable: react-loadable react-loadable-webpack 
+@bolide-ai/mcp: glob 
+@bolio-ui/core: @algolia/client-search src core @mdx-js/react lodash react-instantsearch-core match-sorter fs-extra @storybook/addons @storybook/theming 
+@bollard/lib-darwin-arm64: @bollard/lib-android-arm64 @bollard/lib-android-arm-eabi @bollard/lib-win32-x64-msvc @bollard/lib-win32-ia32-msvc @bollard/lib-win32-arm64-msvc @bollard/lib-darwin-universal @bollard/lib-darwin-x64 @bollard/lib-darwin-arm64 @bollard/lib-freebsd-x64 @bollard/lib-linux-x64-musl @bollard/lib-linux-x64-gnu @bollard/lib-linux-arm64-musl @bollard/lib-linux-arm64-gnu @bollard/lib-linux-arm-musleabihf @bollard/lib-linux-arm-gnueabihf @bollard/lib-linux-riscv64-musl @bollard/lib-linux-riscv64-gnu @bollard/lib-linux-s390x-gnu 
+@bollard/lib-darwin-x64: @bollard/lib-android-arm64 @bollard/lib-android-arm-eabi @bollard/lib-win32-x64-msvc @bollard/lib-win32-ia32-msvc @bollard/lib-win32-arm64-msvc @bollard/lib-darwin-universal @bollard/lib-darwin-x64 @bollard/lib-darwin-arm64 @bollard/lib-freebsd-x64 @bollard/lib-linux-x64-musl @bollard/lib-linux-x64-gnu @bollard/lib-linux-arm64-musl @bollard/lib-linux-arm64-gnu @bollard/lib-linux-arm-musleabihf @bollard/lib-linux-arm-gnueabihf @bollard/lib-linux-riscv64-musl @bollard/lib-linux-riscv64-gnu @bollard/lib-linux-s390x-gnu 
+@bollard/lib-linux-arm64-gnu: @bollard/lib-android-arm64 @bollard/lib-android-arm-eabi @bollard/lib-win32-x64-msvc @bollard/lib-win32-ia32-msvc @bollard/lib-win32-arm64-msvc @bollard/lib-darwin-universal @bollard/lib-darwin-x64 @bollard/lib-darwin-arm64 @bollard/lib-freebsd-x64 @bollard/lib-linux-x64-musl @bollard/lib-linux-x64-gnu @bollard/lib-linux-arm64-musl @bollard/lib-linux-arm64-gnu @bollard/lib-linux-arm-musleabihf @bollard/lib-linux-arm-gnueabihf @bollard/lib-linux-riscv64-musl @bollard/lib-linux-riscv64-gnu @bollard/lib-linux-s390x-gnu 
+@bollard/lib-linux-arm64-musl: @bollard/lib-android-arm64 @bollard/lib-android-arm-eabi @bollard/lib-win32-x64-msvc @bollard/lib-win32-ia32-msvc @bollard/lib-win32-arm64-msvc @bollard/lib-darwin-universal @bollard/lib-darwin-x64 @bollard/lib-darwin-arm64 @bollard/lib-freebsd-x64 @bollard/lib-linux-x64-musl @bollard/lib-linux-x64-gnu @bollard/lib-linux-arm64-musl @bollard/lib-linux-arm64-gnu @bollard/lib-linux-arm-musleabihf @bollard/lib-linux-arm-gnueabihf @bollard/lib-linux-riscv64-musl @bollard/lib-linux-riscv64-gnu @bollard/lib-linux-s390x-gnu 
+@bollard/lib-linux-x64-gnu: @bollard/lib-android-arm64 @bollard/lib-android-arm-eabi @bollard/lib-win32-x64-msvc @bollard/lib-win32-ia32-msvc @bollard/lib-win32-arm64-msvc @bollard/lib-darwin-universal @bollard/lib-darwin-x64 @bollard/lib-darwin-arm64 @bollard/lib-freebsd-x64 @bollard/lib-linux-x64-musl @bollard/lib-linux-x64-gnu @bollard/lib-linux-arm64-musl @bollard/lib-linux-arm64-gnu @bollard/lib-linux-arm-musleabihf @bollard/lib-linux-arm-gnueabihf @bollard/lib-linux-riscv64-musl @bollard/lib-linux-riscv64-gnu @bollard/lib-linux-s390x-gnu 
+@bollard/lib-win32-arm64-msvc: @bollard/lib-android-arm64 @bollard/lib-android-arm-eabi @bollard/lib-win32-x64-msvc @bollard/lib-win32-ia32-msvc @bollard/lib-win32-arm64-msvc @bollard/lib-darwin-universal @bollard/lib-darwin-x64 @bollard/lib-darwin-arm64 @bollard/lib-freebsd-x64 @bollard/lib-linux-x64-musl @bollard/lib-linux-x64-gnu @bollard/lib-linux-arm64-musl @bollard/lib-linux-arm64-gnu @bollard/lib-linux-arm-musleabihf @bollard/lib-linux-arm-gnueabihf @bollard/lib-linux-riscv64-musl @bollard/lib-linux-riscv64-gnu @bollard/lib-linux-s390x-gnu 
+@bollard/lib-win32-x64-msvc: @bollard/lib-android-arm64 @bollard/lib-android-arm-eabi @bollard/lib-win32-x64-msvc @bollard/lib-win32-ia32-msvc @bollard/lib-win32-arm64-msvc @bollard/lib-darwin-universal @bollard/lib-darwin-x64 @bollard/lib-darwin-arm64 @bollard/lib-freebsd-x64 @bollard/lib-linux-x64-musl @bollard/lib-linux-x64-gnu @bollard/lib-linux-arm64-musl @bollard/lib-linux-arm64-gnu @bollard/lib-linux-arm-musleabihf @bollard/lib-linux-arm-gnueabihf @bollard/lib-linux-riscv64-musl @bollard/lib-linux-riscv64-gnu @bollard/lib-linux-s390x-gnu 
