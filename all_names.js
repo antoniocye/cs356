@@ -1,10 +1,8 @@
-import names from "all-the-package-names" assert { type: 'json' };
 import depcheck from 'depcheck';
 import path from 'path';
 import { execSync } from 'child_process';
 import fs from "fs"
-
-console.log("Total number of packages:", names.length);
+import { debug_mode, phantom_file_path, download_count_start, download_count_end } from './config.js'
 
 function depcheckAsync(workDir, options) {
     return new Promise((resolve) => {
@@ -12,18 +10,53 @@ function depcheckAsync(workDir, options) {
     });
 }
 
-async function fetchWithRetries(url, options = {}, retries = 3, delayMs = 1000) {
+async function fetchMetadataWithRetries(url, options = {}, retries = 3, delayMs = 1000) {
     for (let attempt = 1; attempt <= retries; attempt++) {
         try {
             const res = await fetch(url, options);
             if (!res.ok) throw new Error(`HTTP error ${res.status}`);
             return res; // success
         } catch (err) {
-            console.warn(`Attempt ${attempt} failed: ${err.message}`);
-            if (attempt === retries) throw err;
-            await new Promise(resolve => setTimeout(resolve, delayMs));
+            if(debug_mode){
+                console.warn(`Attempt ${attempt} to get metadata failed: ${err.message}`);
+                if (attempt === retries) throw err;
+                await new Promise(resolve => setTimeout(resolve, delayMs));
+            }
         }
     }
+}
+
+
+async function fetchDownloadsWithRetries(package_name, options = {}, retries = 3){
+    let url = `https://api.npmjs.org/downloads/range/${download_count_start}:${download_count_end}/${package_name}`; // provide start and end dates as a string in format yyyy-mm-yy
+
+    for (let attempt = 1; attempt <= retries; attempt++) {
+        try {
+            const res = await fetch(url, options);
+            if (!res.ok) throw new Error(`HTTP error ${res.status}`);
+            return res; // success
+        } catch (err) {
+            if(debug_mode){
+                console.warn(`Attempt ${attempt} failed: ${err.message}`);
+                if (attempt === retries) throw err;
+                await new Promise(resolve => setTimeout(resolve, delayMs));
+            }
+        }
+    }
+}
+
+export async function count_downloads(package_name){
+    // TODO: Put your own end and start data depending on the number agreed for research
+    // Remember that you do not want to include the dates after which you started tinkering with this (post October 9th)
+    let data = await fetchDownloadsWithRetries(package_name);
+    data = await data.json();
+    let count = 0;
+    if(data && "downloads" in data){
+        for(let i = 0; i < data["downloads"].length; i++){
+            count += data["downloads"][i]["downloads"];
+        }
+    }
+    return count;
 }
 
 // given an npm package name,
@@ -33,15 +66,11 @@ async function fetchWithRetries(url, options = {}, retries = 3, delayMs = 1000) 
 // (4) npm install
 // (5) run depcheck
 
-const debug_mode = false
-const filePath = 'phantom.txt';
-
-async function add_to_db(package_name){
-
+export async function add_to_db(package_name){
     // try to fetch data from registry.nmpjs.org
     let data;
     try{
-        const res = await fetchWithRetries(`https://registry.npmjs.org/${package_name}`);
+        const res = await fetchMetadataWithRetries(`https://registry.npmjs.org/${package_name}`);
         if(!res.ok){
             console.error("Package not found:", package_name);
             return 0;
@@ -57,8 +86,7 @@ async function add_to_db(package_name){
     
 
     if(debug_mode){
-        console.log('\n\n===============================================================')
-        console.log(`Working on ${package_name}`)
+        console.log(`--> Working on ${package_name}`)
     }
 
     // find latest version
@@ -81,22 +109,36 @@ async function add_to_db(package_name){
         return 0;
     }
 
+    let repo_given;
     if(!metadata.hasOwnProperty("repository") || metadata["repository"]?.["type"] != "git"){
         if("homepage" in metadata){
             console.log("Github link may be at 'homepage'. Here's given homepage:", metadata["homepage"]);
+            // try to work with the homepage
+            repo_given = metadata["homepage"];
+            if(repo_given.slice(0,19) == "https://github.com/"){
+                repo_given = repo_given.replace(/#.*$/, ""); // remove the # tags to the given link
+            }
+            else{
+                return 0;
+            }
         }
-        return 0;
+        else{
+            return 0;
+        }
     }
 
-    let repo_given = metadata["repository"]["url"];
+    repo_given = metadata["repository"]["url"];
     if(!repo_given){
         return 0;
     }
     if(repo_given.slice(0,9) == "git+https"){
         repo_given = repo_given.slice(4);
     }
-    if(repo_given.slice(0,3) == "git" && repo_given.slice(3,12) == "://github"){
+    else if(repo_given.slice(0,3) == "git" && repo_given.slice(3,12) == "://github"){
         repo_given = "https" + repo_given.slice(3);
+    }
+    else if(repo_given.slice(0,7) == "git+ssh" && repo_given.slice(7,12) == "://git@github"){
+        repo_given = "https" + repo_given.slice(7);
     }
     else if(repo_given.slice(0,5) != "https"){
         console.log("Doesn't fit in current model:", repo_given);
@@ -107,7 +149,7 @@ async function add_to_db(package_name){
         console.log(repo_given);
     }
 
-    // Clone github link
+    // Clone github repo
     const workDir = path.resolve(`./repos/${package_name}`);
 
     try{
@@ -144,7 +186,7 @@ async function add_to_db(package_name){
                 newLine += missing_name + " ";
             }
             newLine += "\n"
-            fs.appendFileSync(filePath, newLine, 'utf-8');
+            fs.appendFileSync(phantom_file_path, newLine, 'utf-8');
 
             if (debug_mode) {
                 console.log('\n\n===============================================================');
@@ -160,16 +202,4 @@ async function add_to_db(package_name){
     }
 
     return 0;
-}
-
-let num_missing = 0;
-let start = 150000;
-let end = 150200;
-console.log("Starting process for range", "[" + start + ":" + end + "]");
-for(let i=start; i<end; i++){
-    const package_name = names[i]
-    num_missing += await add_to_db(package_name)
-    if((i-start) % 20 == 0){
-        console.log("Processed:", 100 * ((i-start) / (end-start)), "%. Number phantom found:", num_missing);
-    }
 }

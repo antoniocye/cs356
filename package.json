@@ -1,6 +1,7 @@
 {
   "type": "module",
   "dependencies": {
-    "depcheck": "^1.4.7"
+    "depcheck": "^1.4.7",
+    "inquirer": "^12.9.6"
   }
 }
