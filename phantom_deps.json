@@ -1,0 +1,442 @@
+[
+  {
+    "packageName": "@boklisten/bl-web",
+    "phantomDeps": [
+      "@types/resize-observer-browser",
+      "node_modules/codelyzer",
+      "@types/jasminewd2"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.927Z"
+  },
+  {
+    "packageName": "@bokuhe/react-native-qrcode-scanner",
+    "phantomDeps": [
+      "react",
+      "react-native",
+      "react-native-qrcode-scanner"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.928Z"
+  },
+  {
+    "packageName": "@bokuweb/nightmare-custom-for-karma",
+    "phantomDeps": [
+      "nightmare"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.929Z"
+  },
+  {
+    "packageName": "@boldare/openai-assistant",
+    "phantomDeps": [
+      "@nx/devkit",
+      "settings",
+      "@boldare/openai-assistant",
+      "@boldare/ai-embedded"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.929Z"
+  },
+  {
+    "packageName": "@boldgrid/components",
+    "phantomDeps": [
+      "autoprefixer"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.929Z"
+  },
+  {
+    "packageName": "@boldgrid/controls",
+    "phantomDeps": [
+      "@boldgrid/controls",
+      "@material/checkbox",
+      "autoprefixer"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.929Z"
+  },
+  {
+    "packageName": "@boldr/auth",
+    "phantomDeps": [
+      "react",
+      "redux"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.930Z"
+  },
+  {
+    "packageName": "@boldr/backend",
+    "phantomDeps": [
+      "react",
+      "redux"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.930Z"
+  },
+  {
+    "packageName": "@boldr/cli",
+    "phantomDeps": [
+      "react",
+      "redux"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.930Z"
+  },
+  {
+    "packageName": "@boldr/config",
+    "phantomDeps": [
+      "react",
+      "redux"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.930Z"
+  },
+  {
+    "packageName": "@boldr/core",
+    "phantomDeps": [
+      "react",
+      "redux"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.931Z"
+  },
+  {
+    "packageName": "@boldr/icons",
+    "phantomDeps": [
+      "react",
+      "redux"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.931Z"
+  },
+  {
+    "packageName": "@boldr/tools",
+    "phantomDeps": [
+      "react",
+      "redux"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.931Z"
+  },
+  {
+    "packageName": "@boldr/ui",
+    "phantomDeps": [
+      "autoprefixer",
+      "@storybook/addon-actions",
+      "react-docgen",
+      "doctrine",
+      "recast"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.931Z"
+  },
+  {
+    "packageName": "@boldr/utils",
+    "phantomDeps": [
+      "react",
+      "redux"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.931Z"
+  },
+  {
+    "packageName": "@boldreports/angular-reporting-components",
+    "phantomDeps": [
+      "@types/jquery"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.932Z"
+  },
+  {
+    "packageName": "@boldvideo/bold-js",
+    "phantomDeps": [
+      "lib"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.932Z"
+  },
+  {
+    "packageName": "@bolekro/react-loadable",
+    "phantomDeps": [
+      "react-loadable",
+      "react-loadable-webpack"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.932Z"
+  },
+  {
+    "packageName": "@bolide-ai/mcp",
+    "phantomDeps": [
+      "glob"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.933Z"
+  },
+  {
+    "packageName": "@bolio-ui/core",
+    "phantomDeps": [
+      "@algolia/client-search",
+      "src",
+      "core",
+      "@mdx-js/react",
+      "lodash",
+      "react-instantsearch-core",
+      "match-sorter",
+      "fs-extra",
+      "@storybook/addons",
+      "@storybook/theming"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.933Z"
+  },
+  {
+    "packageName": "@bollard/lib-darwin-arm64",
+    "phantomDeps": [
+      "@bollard/lib-android-arm64",
+      "@bollard/lib-android-arm-eabi",
+      "@bollard/lib-win32-x64-msvc",
+      "@bollard/lib-win32-ia32-msvc",
+      "@bollard/lib-win32-arm64-msvc",
+      "@bollard/lib-darwin-universal",
+      "@bollard/lib-darwin-x64",
+      "@bollard/lib-darwin-arm64",
+      "@bollard/lib-freebsd-x64",
+      "@bollard/lib-linux-x64-musl",
+      "@bollard/lib-linux-x64-gnu",
+      "@bollard/lib-linux-arm64-musl",
+      "@bollard/lib-linux-arm64-gnu",
+      "@bollard/lib-linux-arm-musleabihf",
+      "@bollard/lib-linux-arm-gnueabihf",
+      "@bollard/lib-linux-riscv64-musl",
+      "@bollard/lib-linux-riscv64-gnu",
+      "@bollard/lib-linux-s390x-gnu"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.934Z"
+  },
+  {
+    "packageName": "@bollard/lib-darwin-x64",
+    "phantomDeps": [
+      "@bollard/lib-android-arm64",
+      "@bollard/lib-android-arm-eabi",
+      "@bollard/lib-win32-x64-msvc",
+      "@bollard/lib-win32-ia32-msvc",
+      "@bollard/lib-win32-arm64-msvc",
+      "@bollard/lib-darwin-universal",
+      "@bollard/lib-darwin-x64",
+      "@bollard/lib-darwin-arm64",
+      "@bollard/lib-freebsd-x64",
+      "@bollard/lib-linux-x64-musl",
+      "@bollard/lib-linux-x64-gnu",
+      "@bollard/lib-linux-arm64-musl",
+      "@bollard/lib-linux-arm64-gnu",
+      "@bollard/lib-linux-arm-musleabihf",
+      "@bollard/lib-linux-arm-gnueabihf",
+      "@bollard/lib-linux-riscv64-musl",
+      "@bollard/lib-linux-riscv64-gnu",
+      "@bollard/lib-linux-s390x-gnu"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.934Z"
+  },
+  {
+    "packageName": "@bollard/lib-linux-arm64-gnu",
+    "phantomDeps": [
+      "@bollard/lib-android-arm64",
+      "@bollard/lib-android-arm-eabi",
+      "@bollard/lib-win32-x64-msvc",
+      "@bollard/lib-win32-ia32-msvc",
+      "@bollard/lib-win32-arm64-msvc",
+      "@bollard/lib-darwin-universal",
+      "@bollard/lib-darwin-x64",
+      "@bollard/lib-darwin-arm64",
+      "@bollard/lib-freebsd-x64",
+      "@bollard/lib-linux-x64-musl",
+      "@bollard/lib-linux-x64-gnu",
+      "@bollard/lib-linux-arm64-musl",
+      "@bollard/lib-linux-arm64-gnu",
+      "@bollard/lib-linux-arm-musleabihf",
+      "@bollard/lib-linux-arm-gnueabihf",
+      "@bollard/lib-linux-riscv64-musl",
+      "@bollard/lib-linux-riscv64-gnu",
+      "@bollard/lib-linux-s390x-gnu"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.934Z"
+  },
+  {
+    "packageName": "@bollard/lib-linux-arm64-musl",
+    "phantomDeps": [
+      "@bollard/lib-android-arm64",
+      "@bollard/lib-android-arm-eabi",
+      "@bollard/lib-win32-x64-msvc",
+      "@bollard/lib-win32-ia32-msvc",
+      "@bollard/lib-win32-arm64-msvc",
+      "@bollard/lib-darwin-universal",
+      "@bollard/lib-darwin-x64",
+      "@bollard/lib-darwin-arm64",
+      "@bollard/lib-freebsd-x64",
+      "@bollard/lib-linux-x64-musl",
+      "@bollard/lib-linux-x64-gnu",
+      "@bollard/lib-linux-arm64-musl",
+      "@bollard/lib-linux-arm64-gnu",
+      "@bollard/lib-linux-arm-musleabihf",
+      "@bollard/lib-linux-arm-gnueabihf",
+      "@bollard/lib-linux-riscv64-musl",
+      "@bollard/lib-linux-riscv64-gnu",
+      "@bollard/lib-linux-s390x-gnu"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.934Z"
+  },
+  {
+    "packageName": "@bollard/lib-linux-x64-gnu",
+    "phantomDeps": [
+      "@bollard/lib-android-arm64",
+      "@bollard/lib-android-arm-eabi",
+      "@bollard/lib-win32-x64-msvc",
+      "@bollard/lib-win32-ia32-msvc",
+      "@bollard/lib-win32-arm64-msvc",
+      "@bollard/lib-darwin-universal",
+      "@bollard/lib-darwin-x64",
+      "@bollard/lib-darwin-arm64",
+      "@bollard/lib-freebsd-x64",
+      "@bollard/lib-linux-x64-musl",
+      "@bollard/lib-linux-x64-gnu",
+      "@bollard/lib-linux-arm64-musl",
+      "@bollard/lib-linux-arm64-gnu",
+      "@bollard/lib-linux-arm-musleabihf",
+      "@bollard/lib-linux-arm-gnueabihf",
+      "@bollard/lib-linux-riscv64-musl",
+      "@bollard/lib-linux-riscv64-gnu",
+      "@bollard/lib-linux-s390x-gnu"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.935Z"
+  },
+  {
+    "packageName": "@bollard/lib-win32-arm64-msvc",
+    "phantomDeps": [
+      "@bollard/lib-android-arm64",
+      "@bollard/lib-android-arm-eabi",
+      "@bollard/lib-win32-x64-msvc",
+      "@bollard/lib-win32-ia32-msvc",
+      "@bollard/lib-win32-arm64-msvc",
+      "@bollard/lib-darwin-universal",
+      "@bollard/lib-darwin-x64",
+      "@bollard/lib-darwin-arm64",
+      "@bollard/lib-freebsd-x64",
+      "@bollard/lib-linux-x64-musl",
+      "@bollard/lib-linux-x64-gnu",
+      "@bollard/lib-linux-arm64-musl",
+      "@bollard/lib-linux-arm64-gnu",
+      "@bollard/lib-linux-arm-musleabihf",
+      "@bollard/lib-linux-arm-gnueabihf",
+      "@bollard/lib-linux-riscv64-musl",
+      "@bollard/lib-linux-riscv64-gnu",
+      "@bollard/lib-linux-s390x-gnu"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.936Z"
+  },
+  {
+    "packageName": "@bollard/lib-win32-x64-msvc",
+    "phantomDeps": [
+      "@bollard/lib-android-arm64",
+      "@bollard/lib-android-arm-eabi",
+      "@bollard/lib-win32-x64-msvc",
+      "@bollard/lib-win32-ia32-msvc",
+      "@bollard/lib-win32-arm64-msvc",
+      "@bollard/lib-darwin-universal",
+      "@bollard/lib-darwin-x64",
+      "@bollard/lib-darwin-arm64",
+      "@bollard/lib-freebsd-x64",
+      "@bollard/lib-linux-x64-musl",
+      "@bollard/lib-linux-x64-gnu",
+      "@bollard/lib-linux-arm64-musl",
+      "@bollard/lib-linux-arm64-gnu",
+      "@bollard/lib-linux-arm-musleabihf",
+      "@bollard/lib-linux-arm-gnueabihf",
+      "@bollard/lib-linux-riscv64-musl",
+      "@bollard/lib-linux-riscv64-gnu",
+      "@bollard/lib-linux-s390x-gnu"
+    ],
+    "downloadCount": null,
+    "timestamp": "2025-10-17T18:25:10.936Z"
+  },
+  {
+    "packageName": "@tea3/telegram",
+    "phantomDeps": [
+      "telegram",
+      "express",
+      "body-parser",
+      "input"
+    ],
+    "downloadCount": 0,
+    "timestamp": "2025-10-17T18:39:24.874Z"
+  },
+  {
+    "packageName": "@teable/sharedb",
+    "phantomDeps": [
+      "inherits"
+    ],
+    "downloadCount": 0,
+    "timestamp": "2025-10-17T18:40:49.236Z"
+  },
+  {
+    "packageName": "@teachfloor/extension-kit",
+    "phantomDeps": [
+      "@storybook/addons"
+    ],
+    "downloadCount": 15,
+    "timestamp": "2025-10-17T18:43:04.568Z"
+  },
+  {
+    "packageName": "@teachfloor/ui-kit",
+    "phantomDeps": [
+      "@storybook/addons"
+    ],
+    "downloadCount": 321,
+    "timestamp": "2025-10-17T18:44:20.386Z"
+  },
+  {
+    "packageName": "@teacode/graphql-hook-transformer",
+    "phantomDeps": [
+      "graphql-mapping-template",
+      "cloudform-types"
+    ],
+    "downloadCount": 1,
+    "timestamp": "2025-10-17T18:45:06.100Z"
+  },
+  {
+    "packageName": "@teages/nuxt-simple-graphql-client",
+    "phantomDeps": [
+      "#app",
+      "#imports",
+      "vue",
+      "~"
+    ],
+    "downloadCount": 7,
+    "timestamp": "2025-10-17T18:47:22.420Z"
+  },
+  {
+    "packageName": "@teaghy/antd-dayjs-webpack-plugin",
+    "phantomDeps": [
+      "loader-utils"
+    ],
+    "downloadCount": 2,
+    "timestamp": "2025-10-17T18:47:56.190Z"
+  },
+  {
+    "packageName": "@teaghy/luckyexcel",
+    "phantomDeps": [
+      "jquery",
+      "echarts",
+      "Vuex",
+      "Vue"
+    ],
+    "downloadCount": 5,
+    "timestamp": "2025-10-17T18:48:31.409Z"
+  }
+]

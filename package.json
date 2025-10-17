@@ -1,6 +1,13 @@
 {
   "type": "module",
+  "scripts": {
+    "start": "node cli.js",
+    "show-db": "node show_db.js",
+    "seed-phantom": "node seed_from_phantom_txt.js",
+    "seed-test": "node seed_db.js"
+  },
   "dependencies": {
+    "all-the-package-names": "^2.0.2237",
     "depcheck": "^1.4.7",
     "inquirer": "^12.9.6"
   }

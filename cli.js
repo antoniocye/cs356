@@ -2,6 +2,7 @@ import inquirer from 'inquirer';
 import names from "all-the-package-names" assert { type: 'json' };
 import { count_downloads, add_to_db } from './all_names.js';
 import { auto_range_start, auto_range_end } from './config.js';
+import { db } from './database.js';
 
 async function run_cli(){
     let num_packages = names.length;
