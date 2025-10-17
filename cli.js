@@ -40,7 +40,7 @@ async function run_cli(){
       name: 'range_end',
       message: 'End range:',
       when: (answers) => answers.task === 1 || answers.task === 3,
-      validate: (input, answers) => {
+      validate: (input) => {
         const val = parseInt(input, 10);
         if (isNaN(val) || val <= 0) return 'Must be a positive integer';
         if (val > num_packages) return `Must be <= ${num_packages}`;
@@ -82,4 +82,16 @@ async function run_cli(){
 }
 
 
-run_cli();
+// run_cli();
+
+for(var i = 1000000; i < 1000200; i++){
+    var back_s = names[i].indexOf('/');
+    console.log(names[i].slice(1,back_s), names[i].slice(back_s+1,-1));
+}
+
+// find criteria for grouping these into families of packages under the same organization
+// - name of package from @domain/subdomain? name of author? github domains?
+// process list of packages and change phantom detection method to include:
+// - don't count as phantom dependencies within your family
+// - don't count as phantom dependencies that someone within your family has a direct dependency on
+// find a database for CVE findings per package
