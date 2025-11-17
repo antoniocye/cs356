@@ -7,6 +7,7 @@
     "seed-test": "node seed_db.js"
   },
   "dependencies": {
+    "-": "^0.0.1",
     "all-the-package-names": "^2.0.2237",
     "depcheck": "^1.4.7",
     "inquirer": "^12.9.6"
