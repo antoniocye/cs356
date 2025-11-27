@@ -2,7 +2,7 @@ import depcheck from 'depcheck';
 import path from 'path';
 import { execSync } from 'child_process';
 import { debug_mode, download_count_start, download_count_end } from '../config.js'
-import { db } from '../database.js'
+// import { db } from '../database.js'
 import names from "all-the-package-names" assert { type: 'json' };
 import fs from 'fs'
 
@@ -68,6 +68,18 @@ export async function count_downloads(package_name){
 }
 
 
+export function is_empty(object){
+    if(!object){
+        return true;
+    }
+
+    for (const el in object) {
+        if (Object.hasOwn(object, el)) {
+            return false;
+        }
+    }
+    return true;
+}
 
 // given an npm package name,
 // (1) find the github repo corresponding to it
@@ -196,7 +208,7 @@ export async function add_to_db(package_name){
             if (missing > 0) {
                 const phantomDeps = Object.keys(results.missing);
                 const downloads = await count_downloads(package_name);
-                db.addPhantomDependencies(package_name, phantomDeps, downloads);
+                // db.addPhantomDependencies(package_name, phantomDeps, downloads);
 
                 if (debug_mode) {
                     console.log('\n\n===============================================================');

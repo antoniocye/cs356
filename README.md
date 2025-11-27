@@ -1,5 +1,5 @@
 # Phantom Dependencies: Ghost Busting
-# A project for CS 356 (Topics in Network Security) at Stanford University
+# Large Scale Study of Phantom Dependencies in npm and PyPi
 
 
 
