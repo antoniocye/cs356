@@ -2,6 +2,8 @@ import fs from 'fs/promises';
 import path from 'path';
 import fetch from 'node-fetch'
 import { is_empty } from "../scripts_npm/util.js"
+import { execFile } from "child_process";
+
 
 class DatabaseManager {
     constructor(dbFilePath) {
@@ -15,8 +17,9 @@ class DatabaseManager {
 
     /** Loads the data from the database file into the working copy.
      *  Should be called once at the beginning of a working session.
+     * @param {number} param - When param != 0: skips some unnecessary checks if the user is sure that the database file is well formed.
      */
-    async init() {
+    async init(param=0) {
         const text_in_file = await fs.readFile(this.dbFilePath, 'utf-8');
         const json = text_in_file.trim() ? JSON.parse(text_in_file) : {};
         this.data = json;
@@ -30,21 +33,23 @@ class DatabaseManager {
         for(let pkg in this.data.packages){
             this.seen.add(pkg);
 
-            // Fetches data for the package (calls recursiveAdd) if not given.
-            // It is important that this is done sequentially!
-            if(is_empty(this.data.packages[pkg])){
-                await this.recursiveAdd(pkg);
-                this.has_data_changed = true;
-            }
+            if(param == 0){
+                // Fetches data for the package (calls recursiveAdd) if not given.
+                // It is important that this is done sequentially!
+                if(is_empty(this.data.packages[pkg])){
+                    await this.recursiveAdd(pkg);
+                    this.has_data_changed = true;
+                }
 
-            // Constructs meta_light of the package if not given.
-            if(!is_empty(this.data.packages[pkg]?.meta) && !this.data.packages[pkg]?.meta_light){
-                this.constructMetaLight(pkg);
-                this.has_data_changed = true;
-            }
+                // Constructs meta_light of the package if not given.
+                if(!is_empty(this.data.packages[pkg]?.meta) && !this.data.packages[pkg]?.meta_light){
+                    this.constructMetaLight(pkg);
+                    this.has_data_changed = true;
+                }
 
-            // Assigns package to a family if not given.
-            this.findFamily(pkg);
+                // Assigns package to a family if not given.
+                this.findFamily(pkg);
+            }
         }
 
         await this.saveChanges();
@@ -135,7 +140,7 @@ class DatabaseManager {
      */
     async recursiveAdd(packageName, depth=0) {
         // Periodically log progress for heavier loads.
-        if(depth == 0 && Math.random() < .5){
+        if(depth == 0 && Math.random() < .05){
             console.log(`Starting work on package ${packageName}`);
         }
 
@@ -245,7 +250,218 @@ class DatabaseManager {
             this.has_data_changed = true;
         }
     }
+
+      /**
+     * Extract and normalize the repo URL for a package in this.db.
+     * Tries meta.repository.url first, then meta.homepage if it's a GitHub URL.
+     * Returns null if it can't get a usable https GitHub URL.
+     */
+    getRepoUrl(packageName) {
+        const pkg = this.data?.packages[packageName];
+        if (!pkg || !pkg.meta) return null;
+
+        const meta = pkg.meta;
+        let repo = null;
+
+        // Checks if repository.url has type === "git".
+        if (
+            meta.repository &&
+            meta.repository.type === "git" &&
+            typeof meta.repository.url === "string"
+        ) {
+            repo = meta.repository.url;
+        } 
+        
+        else if (
+            meta.homepage &&
+            meta.homepage.startsWith("https://github.com/")
+        ) {
+            // Fallback: homepage that is a GitHub URL.
+            repo = meta.homepage.replace(/#.*$/, "");
+        } else {
+            return null;
+        }
+
+        const hashIndex = repo.indexOf("#");
+        if (hashIndex !== -1) {
+            repo = repo.slice(0, hashIndex);
+        }
+
+        // Normalizes common git URL formats to https.
+        if (repo.startsWith("git+https")) {
+            // git+https://... -> https://...
+            repo = repo.slice(4);
+        } 
+        else if (repo.startsWith("git://github")) {
+            // git://github.com/... -> https://github.com/...
+            repo = "https" + repo.slice(3);
+        } 
+        else if (repo.startsWith("git+ssh://git@github.com/")) {
+            // git+ssh://git@github.com/org/repo.git -> https://github.com/org/repo.git
+            repo = repo.replace("git+ssh://git@", "https://");
+        } 
+        else if (!repo.startsWith("https://")) {
+            // Not a format we support
+            console.log("null 3");
+            return null;
+        }
+
+        if (repo.endsWith(".git")) {
+            repo = repo.slice(0, -4);
+        }
+
+        return repo;
+    }
+
+    /**
+     * Run depcheck for a given package using Docker.
+     * - Looks up repo URL from this.db
+     * - Runs: docker run --rm depcheck-runner:latest <repoUrl>
+     * - Expects JSON with { ok, phantomDeps, unusedDeps, unusedDevDeps, error? }
+     * @param {string} packageName
+     * @returns {Promise<{
+     *   ok: boolean;
+     *   packageName: string;
+     *   repoUrl: string | null;
+     *   phantomDeps: string[];
+     *   unusedDeps: string[];
+     *   unusedDevDeps: string[];
+     *   error?: string;
+     * }>}
+     */
+    async one_package_depcheck(packageName) {
+        const repoUrl = this.getRepoUrl(packageName);
+
+        if (!repoUrl) {
+            return {
+                ok: false,
+                packageName,
+                repoUrl: null,
+                phantomDeps: [],
+                unusedDeps: [],
+                unusedDevDeps: [],
+                error: "No usable repo URL found in db.meta.",
+            };
+        }
+
+        return new Promise((resolve) => {
+            const args = ["run", "--rm", "depcheck-runner:latest", repoUrl];
+
+            execFile(
+                "docker",
+                args,
+                { maxBuffer: 10 * 1024 * 1024 },
+                (err, stdout /*, stderr */) => {
+                    if (err) {
+                        return resolve({
+                        ok: false,
+                        packageName,
+                        repoUrl,
+                        phantomDeps: [],
+                        unusedDeps: [],
+                        unusedDevDeps: [],
+                        error: `Docker error: ${err.message}.`,
+                        });
+                    }
+
+                    if (!stdout) {
+                        return resolve({
+                        ok: false,
+                        packageName,
+                        repoUrl,
+                        phantomDeps: [],
+                        unusedDeps: [],
+                        unusedDevDeps: [],
+                        error: "No output from depcheck container.",
+                        });
+                    }
+
+                    let parsed;
+                    try {
+                        parsed = JSON.parse(stdout.toString("utf8"));
+                    } catch (parseErr) {
+                        return resolve({
+                        ok: false,
+                        packageName,
+                        repoUrl,
+                        phantomDeps: [],
+                        unusedDeps: [],
+                        unusedDevDeps: [],
+                        error: `Failed to parse depcheck JSON: ${parseErr.message}.`,
+                        });
+                    }
+
+                    if (!parsed.ok) {
+                        return resolve({
+                        ok: false,
+                        packageName,
+                        repoUrl,
+                        phantomDeps: [],
+                        unusedDeps: [],
+                        unusedDevDeps: [],
+                        error: parsed.error || "depcheck runner reported failure.",
+                        });
+                    }
+
+                    return resolve({
+                        ok: true,
+                        packageName,
+                        repoUrl,
+                        phantomDeps: parsed.phantomDeps || parsed.missing || [],
+                        unusedDeps: parsed.unusedDeps || [],
+                        unusedDevDeps: parsed.unusedDevDeps || [],
+                    });
+                }
+            );
+        });
+    }
+
+    /**
+     * Run depcheck for all packages in the working copy, at most 5 in parallel.
+     * Effect:
+     *   - Sets this.data.packages[packageName].depcheck_result for each package
+     */
+    async run_depcheck() {
+        const packageNames = Object.keys(this.data.packages);
+        const concurrency = 3;
+        this.has_data_changed = true;
+        let number_phantom = 0;
+
+        for (let i = 0; i < packageNames.length; i += concurrency) {
+            if(i % 99 == 0){
+                console.log(`--> ${new Date().toLocaleString()}: Performed depcheck on ${i} packages with ${number_phantom} phantom packages found.`)
+                this.saveChanges();
+                this.has_data_changed = true;
+            }
+            const batchNames = packageNames.slice(i, i + concurrency);
+
+            const batchPromises = batchNames.map(async (name) => {
+            try {
+                const result = await this.one_package_depcheck(name);
+                // attach result onto the db
+                this.data.packages[name].depcheck_result = result;
+                number_phantom += result.phantomDeps.length;
+            } catch (err) {
+                // in case one_package_depcheck throws instead of returning an error object
+                this.data.packages[name].depcheck_result = {
+                    ok: false,
+                    packageName: name,
+                    repoUrl: null,
+                    phantomDeps: [],
+                    unusedDeps: [],
+                    unusedDevDeps: [],
+                    error: err && err.message ? err.message : String(err),
+                };
+            }
+            });
+
+            // wait for this batch of up to 5 to finish before starting the next
+            await Promise.all(batchPromises);
+        }
+        this.saveChanges();
+    }
 }
 
 const db = new DatabaseManager('database.json');
-await db.init();
+await db.init(1);
+await db.run_depcheck();
