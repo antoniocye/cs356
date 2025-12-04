@@ -2,15 +2,6 @@
 # Large Scale Study of Phantom Dependencies in npm and PyPi
 
 
-
-## TODOS:
-- ~~find families in dependency graphs~~
-- configure docker properly to avoid nuking your laptop
-- update this README and write cli
-- run depcheck (delete files when we're done with them) and add them to the database
-- find a way to detect CVEs
-
-
 To run the code, first run `npm install` then `node cli.js`. To change set values, go to `config.js`.
 
 ## Docker

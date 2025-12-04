@@ -18,11 +18,6 @@ async function main() {
       stdio: "ignore",
     });
 
-    execSync("npm install --ignore-scripts", {
-      cwd: workDir,
-      stdio: "ignore",
-    });
-
     const options = {
       ignoreDirs: ["dist", "build", "test"],
       ignoreMatches: ["eslint*", "eslint-plugin"],

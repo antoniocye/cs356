@@ -56,7 +56,8 @@ class DatabaseManager {
         this.db_len = Object.keys(this.data["packages"]).length;
         
         console.log("The database was initialized.");
-        console.log(`Found ${this.db_len} packages and ${this.seen_fam.size} families.`)
+        console.log(`There are a total of ${this.db_len} packages in the database.`)
+        this.count_families();
     }
 
     /** Saves changes from the working copy to the database file.
@@ -302,7 +303,6 @@ class DatabaseManager {
         } 
         else if (!repo.startsWith("https://")) {
             // Not a format we support
-            console.log("null 3");
             return null;
         }
 
@@ -423,12 +423,12 @@ class DatabaseManager {
      */
     async run_depcheck() {
         const packageNames = Object.keys(this.data.packages);
-        const concurrency = 3;
+        const concurrency = 20;
         this.has_data_changed = true;
         let number_phantom = 0;
 
         for (let i = 0; i < packageNames.length; i += concurrency) {
-            if(i % 99 == 0){
+            if(i % 1000 == 0){
                 console.log(`--> ${new Date().toLocaleString()}: Performed depcheck on ${i} packages with ${number_phantom} phantom packages found.`)
                 this.saveChanges();
                 this.has_data_changed = true;
@@ -437,10 +437,11 @@ class DatabaseManager {
 
             const batchPromises = batchNames.map(async (name) => {
             try {
-                const result = await this.one_package_depcheck(name);
-                // attach result onto the db
-                this.data.packages[name].depcheck_result = result;
-                number_phantom += result.phantomDeps.length;
+                if (!this.data.packages?.[name]?.depcheck_result) {
+                    const result = await this.one_package_depcheck(name);
+                    this.data.packages[name].depcheck_result = result;
+                    number_phantom += result.phantomDeps.length;
+                }
             } catch (err) {
                 // in case one_package_depcheck throws instead of returning an error object
                 this.data.packages[name].depcheck_result = {
@@ -458,10 +459,22 @@ class DatabaseManager {
             // wait for this batch of up to 5 to finish before starting the next
             await Promise.all(batchPromises);
         }
+
         this.saveChanges();
+    }
+
+    count_families() {
+        let num = 0;
+        for(let fam of this.data.families){
+            if(fam.packages.length > 1){
+                num += 1;
+            }
+        }
+        console.log(`The number of trivial families is ${this.data.families.length}`);
+        console.log(`The number of non trivial families is: ${num}`);
+        return num;
     }
 }
 
 const db = new DatabaseManager('database.json');
 await db.init(1);
-await db.run_depcheck();
