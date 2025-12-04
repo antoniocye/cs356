@@ -2,29 +2,20 @@
 # Large Scale Study of Phantom Dependencies in npm and PyPi
 
 
-To run the code, first run `npm install` then `node cli.js`. To change set values, go to `config.js`.
-
-## Docker
-
-Build the image:
-
+To run the code, first install necessary dependencies by running
 ```bash
-docker build -t cs356-app .
+npm install
 ```
 
-Run the container (interactive CLI):
+Then, run `cd database_manager_npm`, build the docker image in case you want to do any depcheck queries using:
 
 ```bash
-docker run --rm -it -v "$(pwd)":/usr/src/app -w /usr/src/app cs356-app
+docker build --no-cache -f docker/Depcheck.Dockerfile -t depcheck-runner:latest .
 ```
 
-Or using docker-compose:
-
+And finally, modify `database.js` to call whatever functions you need before running:
 ```bash
-docker-compose up --build
+node database.js
 ```
 
-Notes:
-
-- `phantom_deps.json` and `phantom.txt` are ignored in the image by default to avoid baking data into the image. Use a bind mount (the examples above) to access and persist data on the host.
-- If you want the container to seed from `phantom.txt` on startup, change the container command to `node seed_from_phantom_txt.js`.
+You can run the previous cli script by running `cd archived_files` then `node cli.js` from the root directory.
