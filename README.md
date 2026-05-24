@@ -1,7 +1,43 @@
 # Phantom Dependencies
 
-Reproducible research pipeline for measuring externally managed phantom
-dependency candidates in npm and PyPI packages.
+This repository contains the code, data artifacts, and paper for a measurement
+study of phantom dependencies in npm and PyPI.
+
+**Study PDF:** [Phantom Dependencies: Ghost Busting](paper_usenix/main.pdf)  
+**LaTeX source:** [paper_usenix/main.tex](paper_usenix/main.tex)
+
+## Overview
+
+A phantom dependency is a package that project code imports or requires without
+declaring it as a direct dependency. The project may still be able to access the
+package because another dependency installs it transitively. This repository
+measures externally managed phantom dependencies: cases where the phantom
+package is present in the dependency closure and is outside the inferred
+maintainer family of the package using it.
+
+The current paper reports:
+
+- npm: 118 unique externally managed phantom packages across 567 seed-closure
+  occurrences in the top-1,000 package study.
+- npm resolver validation: 18 reachable affected-version rows across 5 seeds.
+- npm rollback analysis: 15 reachable strict rollback-candidate rows across 6
+  seeds.
+- PyPI: 801 successful static source analyses, with 593 packages containing at
+  least one filtered phantom candidate.
+
+PyPI vulnerability results are reported as advisory-history signals only; they
+are not version-resolved exploitability claims.
+
+## Repository Layout
+
+- `bin/cs356.js`: command-line entry point for analysis tasks.
+- `src/`: npm/PyPI analysis, OSV querying, resolver validation, and utilities.
+- `pypi_pipeline/`: PyPI source collector and static import scanner.
+- `database_manager_npm/`: npm database and Dockerized depcheck runner.
+- `results/`: generated CSV/JSON/SVG artifacts used by the study.
+- `paper_usenix/`: USENIX-style LaTeX paper folder and built PDF.
+- `data/`: publication-facing seed inputs.
+- `test/`: Node test suite for core helpers.
 
 ## Setup
 
@@ -9,18 +45,17 @@ Use Node 20 or newer.
 
 ```bash
 npm install
-npm test
-npm audit --audit-level=moderate
+npm run check
 ```
 
-The Dockerized npm depcheck runner is optional. It requires a running Docker
+The Dockerized npm depcheck runner is optional and requires a running Docker
 daemon:
 
 ```bash
 npm run build:depcheck-image
 ```
 
-## Reproduce the Results
+## Reproduce the Main Artifacts
 
 Analyze the checked-in npm database and top-1,000 seed set:
 
@@ -57,7 +92,7 @@ Build the paper:
 npm run paper
 ```
 
-## Data Collection Commands
+## Additional npm Collection Commands
 
 Collect a fresh top-N npm seed set:
 
@@ -84,45 +119,16 @@ node bin/cs356.js depcheck-npm \
   --concurrency 20
 ```
 
-## Generated Artifacts
+## Notes
 
-Important generated files:
+Vulnerability data comes from OSV, which aggregates public advisory sources
+including GHSA entries for npm and PyPI packages. OSV responses are cached
+locally under `cache/` when analyses run. That directory is ignored by git
+because raw advisory payloads can contain example credentials or other strings
+that trigger repository push protection; the published result artifacts contain
+the summarized advisory data used by the paper.
 
-- `results/npm-analysis.json`: npm summary with coverage and filter diagnostics.
-- `results/external-phantom-occurrences.csv`: npm occurrence table after closure
-  and family filtering.
-- `results/rollback-candidates.csv`: npm rollback-candidate table before
-  resolver validation.
-- `results/npm-resolver-validation.json`: resolver-backed npm vulnerability and
-  rollback validation summary.
-- `results/npm-resolver-validation.csv`: row-level npm resolver validation.
-- `results/pypi-collected.csv`: PyPI static collector output.
-- `results/pypi-collected-analysis.json`: PyPI collected-output analysis.
-- `paper_usenix/`: USENIX-style LaTeX paper folder and built PDF.
-
-## Methodology Notes
-
-The npm analyzer uses a stricter definition than raw depcheck output:
-
-1. depcheck reports a package as used but missing from direct dependencies.
-2. the missing package exists in the package's transitive dependency closure.
-3. the missing package is not in the same inferred family as the package under
-   analysis.
-
-Family inference uses npm scope and GitHub repository owner, and also honors
-legacy family metadata already present in `database_manager_npm/database.json`.
-
-Vulnerability data comes from OSV, which aggregates public advisory sources,
-including GHSA entries for npm and PyPI packages. npm advisory-history
-candidates are additionally checked with a resolver validation pass that records
-reachability and observed installed versions.
-
-OSV responses are cached locally under `cache/` when analyses run. The cache is
-ignored by git because raw advisory payloads can contain example credentials or
-other strings that trigger repository push protection; the published result
-artifacts contain the summarized advisory data used by the paper.
-
-Rollback values are candidates rather than an end-to-end exploit proof. The npm
+Rollback values are candidates rather than end-to-end exploit proofs. The npm
 pipeline reports both affected-range candidates and stricter advisory-level
 range candidates, then validates whether those rows are reachable in actual npm
 install layouts. The PyPI pipeline is static and does not make version-aware
