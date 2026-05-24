@@ -1,0 +1,575 @@
+{
+  "generatedAt": "2026-05-24T09:51:03.541Z",
+  "inputs": {
+    "dbFile": "database_manager_npm/database.json",
+    "seedsFile": "output_files_top_1000/top1000.json",
+    "osvCacheFile": "cache/osv-npm.json",
+    "seedCount": 1000,
+    "databasePackageCount": 12610,
+    "familyCount": 5561,
+    "includeAuthorHeuristics": false
+  },
+  "methodologyNotes": [
+    "Phantoms are retained only when depcheck reported the package as missing, the package appears in the analyzed package's transitive dependency closure, and the package is not in the same inferred family.",
+    "Family inference uses npm scope and GitHub repository owner by default; legacy family properties in the existing database are also honored.",
+    "Vulnerabilities are queried from OSV, which aggregates public advisory sources including GHSA for npm packages.",
+    "Rollback candidates are packages with a vulnerable phantom that has at least one fixed version in OSV; this is a conservative reproducibility signal, not an end-to-end exploit proof.",
+    "Seed-level prevalence is reported as a lower bound because failed depcheck jobs are tracked as unknown coverage, not clean packages."
+  ],
+  "depcheckCoverage": {
+    "packageCount": 12610,
+    "depcheckOkPackages": 8606,
+    "depcheckFailedPackages": 4004,
+    "depcheckMissingPackages": 0,
+    "depcheckOkRate": 0.6824742268041237,
+    "fullyCoveredSeeds": 585,
+    "seedsWithFailedOrMissingDepcheckInClosure": 415,
+    "meanSeedClosureDepcheckCoverage": 0.8210153635286123
+  },
+  "filterDiagnostics": {
+    "rawDepcheckPairs": 15565,
+    "rawDepcheckUniquePhantoms": 3363,
+    "databasePresentPairs": 9134,
+    "databasePresentUniquePhantoms": 1354,
+    "discardedNotInDatabasePairs": 6431,
+    "discardedNotInDatabaseUniquePhantoms": 2009,
+    "transitiveConfirmedPairs": 1693,
+    "transitiveConfirmedUniquePhantoms": 357,
+    "discardedNotInTransitiveClosurePairs": 7441,
+    "discardedNotInTransitiveClosureUniquePhantoms": 1282,
+    "discardedSameFamilyPairs": 981,
+    "discardedSameFamilyUniquePhantoms": 132,
+    "retainedExternalPairs": 712,
+    "retainedExternalUniquePhantoms": 229,
+    "packagesWithFailedDepcheckEncountered": 4004,
+    "packagesMissingDepcheckEncountered": 0
+  },
+  "phantoms": {
+    "uniqueExternalPhantoms": 118,
+    "totalClosureOccurrences": 567,
+    "seedsWithClosurePhantoms": 27,
+    "closurePhantomsPerSeed": {
+      "mean": 0.248,
+      "median": 0,
+      "max": 69
+    },
+    "uniqueRootExternalPhantoms": 107,
+    "rootOccurrences": 233,
+    "seedsWithRootPhantoms": 19,
+    "rootPhantomsPerSeed": {
+      "mean": 0.233,
+      "median": 0,
+      "max": 69
+    },
+    "topExternalPhantoms": [
+      {
+        "phantomName": "d3-array",
+        "occurrences": 19,
+        "seeds": 4,
+        "packages": 12
+      },
+      {
+        "phantomName": "d3-time",
+        "occurrences": 17,
+        "seeds": 3,
+        "packages": 10
+      },
+      {
+        "phantomName": "d3-format",
+        "occurrences": 14,
+        "seeds": 3,
+        "packages": 9
+      },
+      {
+        "phantomName": "d3-time-format",
+        "occurrences": 14,
+        "seeds": 3,
+        "packages": 9
+      },
+      {
+        "phantomName": "lodash",
+        "occurrences": 13,
+        "seeds": 3,
+        "packages": 11
+      },
+      {
+        "phantomName": "aproba",
+        "occurrences": 11,
+        "seeds": 4,
+        "packages": 10
+      },
+      {
+        "phantomName": "color-support",
+        "occurrences": 11,
+        "seeds": 4,
+        "packages": 10
+      },
+      {
+        "phantomName": "console-control-strings",
+        "occurrences": 11,
+        "seeds": 4,
+        "packages": 10
+      },
+      {
+        "phantomName": "has-unicode",
+        "occurrences": 11,
+        "seeds": 4,
+        "packages": 10
+      },
+      {
+        "phantomName": "set-blocking",
+        "occurrences": 11,
+        "seeds": 4,
+        "packages": 10
+      },
+      {
+        "phantomName": "wide-align",
+        "occurrences": 11,
+        "seeds": 4,
+        "packages": 10
+      },
+      {
+        "phantomName": "@babel/generator",
+        "occurrences": 9,
+        "seeds": 3,
+        "packages": 8
+      },
+      {
+        "phantomName": "@babel/parser",
+        "occurrences": 9,
+        "seeds": 3,
+        "packages": 8
+      },
+      {
+        "phantomName": "@babel/template",
+        "occurrences": 9,
+        "seeds": 3,
+        "packages": 8
+      },
+      {
+        "phantomName": "@babel/traverse",
+        "occurrences": 9,
+        "seeds": 3,
+        "packages": 8
+      },
+      {
+        "phantomName": "d3-color",
+        "occurrences": 9,
+        "seeds": 4,
+        "packages": 7
+      },
+      {
+        "phantomName": "semver",
+        "occurrences": 9,
+        "seeds": 4,
+        "packages": 8
+      },
+      {
+        "phantomName": "d3-dsv",
+        "occurrences": 8,
+        "seeds": 2,
+        "packages": 6
+      },
+      {
+        "phantomName": "d3-interpolate",
+        "occurrences": 8,
+        "seeds": 3,
+        "packages": 6
+      },
+      {
+        "phantomName": "d3-scale",
+        "occurrences": 8,
+        "seeds": 3,
+        "packages": 6
+      }
+    ]
+  },
+  "vulnerabilities": {
+    "vulnerableExternalPhantoms": 22,
+    "vulnerableExternalPhantomOccurrences": 105,
+    "observedAffectedExternalPhantoms": 7,
+    "rollbackCandidateExternalPhantoms": 20,
+    "seedsWithAnyVulnerablePhantom": 19,
+    "seedsWithObservedAffectedPhantom": 8,
+    "seedsWithRollbackCandidate": 19,
+    "severityCounts": {
+      "CRITICAL": 3,
+      "HIGH": 13,
+      "UNKNOWN": 1,
+      "MODERATE": 3,
+      "LOW": 2
+    },
+    "topVulnerablePhantoms": [
+      {
+        "phantomName": "lodash",
+        "occurrences": 13,
+        "seeds": 3,
+        "packages": 11,
+        "version": "4.17.21",
+        "vulnerabilityCount": 10,
+        "affectedNowCount": 3,
+        "fixedAvailable": true,
+        "maxSeverity": "CRITICAL",
+        "advisoryIds": [
+          "GHSA-29mw-wpgm-hmr9",
+          "GHSA-35jh-r3h4-6jhm",
+          "GHSA-4xc9-xhrj-v574",
+          "GHSA-f23m-r3pf-42rh",
+          "GHSA-fvqr-27wr-82fm",
+          "GHSA-jf85-cpcp-j695",
+          "GHSA-p6mc-m468-83gw",
+          "GHSA-r5fr-rjxr-66jc",
+          "GHSA-x5rq-j2xg-h7qm",
+          "GHSA-xxjr-mmjv-4gpg"
+        ]
+      },
+      {
+        "phantomName": "@babel/traverse",
+        "occurrences": 9,
+        "seeds": 3,
+        "packages": 8,
+        "version": "7.28.5",
+        "vulnerabilityCount": 1,
+        "affectedNowCount": 0,
+        "fixedAvailable": true,
+        "maxSeverity": "CRITICAL",
+        "advisoryIds": [
+          "GHSA-67hx-6x53-jw92"
+        ]
+      },
+      {
+        "phantomName": "d3-color",
+        "occurrences": 9,
+        "seeds": 4,
+        "packages": 7,
+        "version": "3.1.0",
+        "vulnerabilityCount": 1,
+        "affectedNowCount": 0,
+        "fixedAvailable": true,
+        "maxSeverity": "HIGH",
+        "advisoryIds": [
+          "GHSA-36jr-mh4h-2g58"
+        ]
+      },
+      {
+        "phantomName": "semver",
+        "occurrences": 9,
+        "seeds": 4,
+        "packages": 8,
+        "version": "7.7.3",
+        "vulnerabilityCount": 2,
+        "affectedNowCount": 0,
+        "fixedAvailable": true,
+        "maxSeverity": "HIGH",
+        "advisoryIds": [
+          "GHSA-c2qf-rxjj-qqgw",
+          "GHSA-x6fg-f45m-jf5q"
+        ]
+      },
+      {
+        "phantomName": "ini",
+        "occurrences": 7,
+        "seeds": 3,
+        "packages": 6,
+        "version": "6.0.0",
+        "vulnerabilityCount": 1,
+        "affectedNowCount": 0,
+        "fixedAvailable": true,
+        "maxSeverity": "HIGH",
+        "advisoryIds": [
+          "GHSA-qqgx-2p2h-9c37"
+        ]
+      },
+      {
+        "phantomName": "minimatch",
+        "occurrences": 6,
+        "seeds": 3,
+        "packages": 5,
+        "version": "10.1.1",
+        "vulnerabilityCount": 5,
+        "affectedNowCount": 3,
+        "fixedAvailable": true,
+        "maxSeverity": "HIGH",
+        "advisoryIds": [
+          "GHSA-23c5-xmqv-rm74",
+          "GHSA-3ppc-4f35-3m26",
+          "GHSA-7r86-cg39-jmmj",
+          "GHSA-f8q6-p94x-37v3",
+          "GHSA-hxm2-r34f-qmc5"
+        ]
+      },
+      {
+        "phantomName": "ssri",
+        "occurrences": 6,
+        "seeds": 3,
+        "packages": 5,
+        "version": "13.0.0",
+        "vulnerabilityCount": 2,
+        "affectedNowCount": 0,
+        "fixedAvailable": true,
+        "maxSeverity": "HIGH",
+        "advisoryIds": [
+          "GHSA-325j-24f4-qv5x",
+          "GHSA-vx3p-948g-6vhq"
+        ]
+      },
+      {
+        "phantomName": "tar",
+        "occurrences": 6,
+        "seeds": 3,
+        "packages": 5,
+        "version": "7.5.2",
+        "vulnerabilityCount": 15,
+        "affectedNowCount": 6,
+        "fixedAvailable": true,
+        "maxSeverity": "HIGH",
+        "advisoryIds": [
+          "GHSA-29xp-372q-xqph",
+          "GHSA-34x7-hfp2-rc4v",
+          "GHSA-3jfq-g458-7qm9",
+          "GHSA-5955-9wpr-37jh",
+          "GHSA-83g3-92jg-28cx",
+          "GHSA-8qq5-rm4j-mr97",
+          "GHSA-9ppj-qmqm-q256",
+          "GHSA-9r2w-394v-53qc",
+          "GHSA-f5x3-32g6-xq36",
+          "GHSA-gfjr-3jmm-4g9v",
+          "GHSA-j44m-qm6p-hp7m",
+          "GHSA-qffp-2rhf-9h96",
+          "GHSA-qq89-hq3f-393p",
+          "GHSA-r628-mhmh-qjhw",
+          "GHSA-r6q2-hw4h-h46w"
+        ]
+      },
+      {
+        "phantomName": "npm-registry-fetch",
+        "occurrences": 5,
+        "seeds": 3,
+        "packages": 4,
+        "version": "19.1.1",
+        "vulnerabilityCount": 1,
+        "affectedNowCount": 0,
+        "fixedAvailable": true,
+        "maxSeverity": "MODERATE",
+        "advisoryIds": [
+          "GHSA-jmqm-f2gx-4fjv"
+        ]
+      },
+      {
+        "phantomName": "@npmcli/arborist",
+        "occurrences": 4,
+        "seeds": 2,
+        "packages": 3,
+        "version": "9.1.7",
+        "vulnerabilityCount": 2,
+        "affectedNowCount": 0,
+        "fixedAvailable": true,
+        "maxSeverity": "HIGH",
+        "advisoryIds": [
+          "GHSA-2h3h-q99f-3fhc",
+          "GHSA-gmw6-94gg-2rc2"
+        ]
+      },
+      {
+        "phantomName": "@nx/devkit",
+        "occurrences": 4,
+        "seeds": 2,
+        "packages": 3,
+        "version": "22.1.1",
+        "vulnerabilityCount": 2,
+        "affectedNowCount": 0,
+        "fixedAvailable": false,
+        "maxSeverity": "CRITICAL",
+        "advisoryIds": [
+          "GHSA-cxm3-wv7p-598c",
+          "MAL-2025-41436"
+        ]
+      },
+      {
+        "phantomName": "chalk",
+        "occurrences": 4,
+        "seeds": 2,
+        "packages": 3,
+        "version": "5.6.2",
+        "vulnerabilityCount": 1,
+        "affectedNowCount": 0,
+        "fixedAvailable": false,
+        "maxSeverity": "UNKNOWN",
+        "advisoryIds": [
+          "MAL-2025-46969"
+        ]
+      },
+      {
+        "phantomName": "glob-parent",
+        "occurrences": 4,
+        "seeds": 2,
+        "packages": 3,
+        "version": "6.0.2",
+        "vulnerabilityCount": 2,
+        "affectedNowCount": 0,
+        "fixedAvailable": true,
+        "maxSeverity": "HIGH",
+        "advisoryIds": [
+          "GHSA-cj88-88mr-972w",
+          "GHSA-ww39-953v-wcq6"
+        ]
+      },
+      {
+        "phantomName": "tmp",
+        "occurrences": 4,
+        "seeds": 2,
+        "packages": 3,
+        "version": "0.2.5",
+        "vulnerabilityCount": 1,
+        "affectedNowCount": 0,
+        "fixedAvailable": true,
+        "maxSeverity": "LOW",
+        "advisoryIds": [
+          "GHSA-52f5-9888-hmc6"
+        ]
+      },
+      {
+        "phantomName": "uuid",
+        "occurrences": 4,
+        "seeds": 2,
+        "packages": 3,
+        "version": "13.0.0",
+        "vulnerabilityCount": 1,
+        "affectedNowCount": 1,
+        "fixedAvailable": true,
+        "maxSeverity": "MODERATE",
+        "advisoryIds": [
+          "GHSA-w5hq-g745-h8pq"
+        ]
+      },
+      {
+        "phantomName": "yargs-parser",
+        "occurrences": 4,
+        "seeds": 2,
+        "packages": 3,
+        "version": "22.0.0",
+        "vulnerabilityCount": 1,
+        "affectedNowCount": 0,
+        "fixedAvailable": true,
+        "maxSeverity": "MODERATE",
+        "advisoryIds": [
+          "GHSA-p9pc-299p-vxgp"
+        ]
+      },
+      {
+        "phantomName": "axios",
+        "occurrences": 2,
+        "seeds": 1,
+        "packages": 2,
+        "version": "1.13.2",
+        "vulnerabilityCount": 25,
+        "affectedNowCount": 16,
+        "fixedAvailable": true,
+        "maxSeverity": "HIGH",
+        "advisoryIds": [
+          "GHSA-3p68-rc4w-qgx5",
+          "GHSA-3w6x-2g7m-8v23",
+          "GHSA-42xw-2xvc-qx8m",
+          "GHSA-43fc-jf86-j433",
+          "GHSA-445q-vr5w-6q77",
+          "GHSA-4hjh-wcwx-xvwj",
+          "GHSA-4w2v-q235-vp99",
+          "GHSA-5c9x-8gcm-mpgx",
+          "GHSA-62hf-57xw-28j9",
+          "GHSA-6chq-wfr3-2hj9",
+          "GHSA-8hc4-vh64-cxmj",
+          "GHSA-cph5-m8f7-6c5x",
+          "GHSA-fvcv-3m26-pcqx",
+          "GHSA-jr5f-v2jv-69x6",
+          "GHSA-m7pr-hjqh-92cm",
+          "GHSA-pf86-5x62-jrwf",
+          "GHSA-pmwg-cvhr-8vh7",
+          "GHSA-q8qp-cvcw-x6jj",
+          "GHSA-qj83-cq47-w5f8",
+          "GHSA-vf2m-468p-8v99",
+          "GHSA-w9j2-pvgh-6h63",
+          "GHSA-wf5p-g6vw-rhxx",
+          "GHSA-xhjh-pmcv-23jw",
+          "GHSA-xx6v-rp6x-q39c",
+          "MAL-2026-2307"
+        ]
+      },
+      {
+        "phantomName": "async",
+        "occurrences": 1,
+        "seeds": 1,
+        "packages": 1,
+        "version": "3.2.6",
+        "vulnerabilityCount": 1,
+        "affectedNowCount": 0,
+        "fixedAvailable": true,
+        "maxSeverity": "HIGH",
+        "advisoryIds": [
+          "GHSA-fwr7-v2mv-hh25"
+        ]
+      },
+      {
+        "phantomName": "jpeg-js",
+        "occurrences": 1,
+        "seeds": 1,
+        "packages": 1,
+        "version": "0.4.4",
+        "vulnerabilityCount": 2,
+        "affectedNowCount": 0,
+        "fixedAvailable": true,
+        "maxSeverity": "HIGH",
+        "advisoryIds": [
+          "GHSA-w7q9-p3jq-fmhm",
+          "GHSA-xvf7-4v9q-58w6"
+        ]
+      },
+      {
+        "phantomName": "rollup",
+        "occurrences": 1,
+        "seeds": 1,
+        "packages": 1,
+        "version": "4.53.3",
+        "vulnerabilityCount": 2,
+        "affectedNowCount": 1,
+        "fixedAvailable": true,
+        "maxSeverity": "HIGH",
+        "advisoryIds": [
+          "GHSA-gcx4-mw62-g8wm",
+          "GHSA-mw96-cpmx-2vgc"
+        ]
+      }
+    ]
+  },
+  "rollbackAttack": {
+    "definition": "strict-vulnerable requires an externally managed phantom, at least one provider dependency constraint that intersects a known affected range, and no known fixed version satisfying that provider constraint. affected-range-admitted is a looser upper-bound where the provider range intersects an affected range but also admits at least one known fixed version.",
+    "strictVulnerableSeeds": 6,
+    "strictVulnerableUsingPackages": 10,
+    "strictRows": 26,
+    "affectedRangeAdmittedSeeds": 14,
+    "affectedRangeAdmittedUsingPackages": 28,
+    "affectedRangeRowsIncludingStrict": 177,
+    "weakOnlyRows": 151,
+    "topStrictRollbackPhantoms": [
+      {
+        "name": "minimatch",
+        "count": 11
+      },
+      {
+        "name": "lodash",
+        "count": 9
+      },
+      {
+        "name": "tar",
+        "count": 3
+      },
+      {
+        "name": "ws",
+        "count": 2
+      },
+      {
+        "name": "axios",
+        "count": 1
+      }
+    ]
+  }
+}

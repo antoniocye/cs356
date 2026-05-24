@@ -1,15 +1,29 @@
 {
+  "name": "phantom-dependencies-study",
+  "version": "0.1.0",
+  "description": "Reproducible npm/PyPI phantom dependency analysis pipeline.",
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "cs356": "./bin/cs356.js"
+  },
   "scripts": {
-    "start": "node cli.js",
-    "show-db": "node show_db.js",
-    "seed-phantom": "node seed_from_phantom_txt.js",
-    "seed-test": "node seed_db.js"
+    "cli": "node bin/cs356.js",
+    "analyze:npm": "node bin/cs356.js analyze-npm --db database_manager_npm/database.json --seeds output_files_top_1000/top1000.json --out results/npm-analysis.json",
+    "analyze:pypi": "node bin/cs356.js analyze-pypi-csv --csv results/pypi-collected.csv --out results/pypi-collected-analysis.json",
+    "validate:npm": "node bin/cs356.js validate-npm --occurrences results/external-phantom-occurrences.csv --rollback results/rollback-candidates.csv --out results/npm-resolver-validation.json --csv results/npm-resolver-validation.csv",
+    "paper": "make -C paper_usenix",
+    "check": "npm test && npm audit --audit-level=moderate",
+    "collect:npm-top": "node bin/cs356.js collect-npm-top --out data/npm/top1000.json --limit 1000",
+    "build:depcheck-image": "docker build --no-cache -f database_manager_npm/docker/Depcheck.Dockerfile -t depcheck-runner:latest database_manager_npm",
+    "test": "node --test"
   },
   "dependencies": {
-    "-": "^0.0.1",
     "all-the-package-names": "^2.0.2237",
     "depcheck": "^1.4.7",
-    "inquirer": "^12.9.6"
-  }
+    "semver": "^7.7.2"
+  },
+  "devDependencies": {}
 }

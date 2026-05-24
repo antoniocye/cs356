@@ -1,0 +1,178 @@
+seed,usingPackage,phantomName,providerPackage,providerRange,status,advisoryIds,strictAdvisoryIds,fixedVersions
+ember-data,broccoli-persistent-filter,async,async-promise-queue,^2.4.1,affected-range-admitted,GHSA-fwr7-v2mv-hh25,,2.6.4;3.2.2
+deck.gl,@carto/api-client,d3-color,d3-interpolate,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-geo,vega-geo,d3-color,d3-scale-chromatic,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-geo,vega-geo,d3-color,d3-interpolate,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-geo,vega-projection,d3-color,d3-scale-chromatic,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-geo,vega-projection,d3-color,d3-interpolate,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-geo,vega-scale,d3-color,d3-scale-chromatic,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-geo,vega-scale,d3-color,d3-interpolate,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-parser,vega-parser,d3-color,d3-scale-chromatic,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-parser,vega-parser,d3-color,d3-interpolate,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-parser,vega-scale,d3-color,d3-scale-chromatic,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-parser,vega-scale,d3-color,d3-interpolate,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-parser,vega-functions,d3-color,d3-scale-chromatic,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-parser,vega-functions,d3-color,d3-interpolate,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-parser,vega-scenegraph,d3-color,d3-scale-chromatic,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-parser,vega-scenegraph,d3-color,d3-interpolate,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-scale,vega-scale,d3-color,d3-scale-chromatic,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+vega-scale,vega-scale,d3-color,d3-interpolate,1 - 3,affected-range-admitted,GHSA-36jr-mh4h-2g58,,3.1.0
+testem,testem,ws,socket.io-adapter,~8.17.1,strict-vulnerable,GHSA-58qx-3vcg-4xpx,GHSA-58qx-3vcg-4xpx,8.20.1
+testem,testem,ws,engine.io,~8.17.1,strict-vulnerable,GHSA-58qx-3vcg-4xpx,GHSA-58qx-3vcg-4xpx,8.20.1
+@orval/swr,@stoplight/spectral-core,lodash,@stoplight/json-ref-resolver,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-core,lodash,@stoplight/json,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-core,lodash,@stoplight/spectral-runtime,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-ref-resolver,lodash,@stoplight/json-ref-resolver,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-ref-resolver,lodash,@stoplight/json,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-ref-resolver,lodash,@stoplight/spectral-runtime,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-runtime,lodash,@stoplight/json,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-parsers,lodash,@stoplight/json,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-rulesets,lodash,@stoplight/spectral-functions,~4.17.21,strict-vulnerable,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-rulesets,lodash,@stoplight/spectral-runtime,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-rulesets,lodash,@stoplight/json,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-rulesets,lodash,@stoplight/spectral-core,~4.17.21,strict-vulnerable,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-rulesets,lodash,@stoplight/json-ref-resolver,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-functions,lodash,@stoplight/spectral-runtime,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-functions,lodash,@stoplight/json,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-functions,lodash,@stoplight/spectral-core,~4.17.21,strict-vulnerable,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-functions,lodash,@stoplight/json-ref-resolver,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-formats,lodash,@stoplight/spectral-core,~4.17.21,strict-vulnerable,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-formats,lodash,@stoplight/json-ref-resolver,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-formats,lodash,@stoplight/json,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@orval/swr,@stoplight/spectral-formats,lodash,@stoplight/spectral-runtime,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@appium/base-driver,@appium/base-driver,axios,@appium/support,1.13.2,strict-vulnerable,GHSA-3p68-rc4w-qgx5;GHSA-3w6x-2g7m-8v23;GHSA-43fc-jf86-j433;GHSA-445q-vr5w-6q77;GHSA-5c9x-8gcm-mpgx;GHSA-62hf-57xw-28j9;GHSA-6chq-wfr3-2hj9;GHSA-fvcv-3m26-pcqx;GHSA-m7pr-hjqh-92cm;GHSA-pf86-5x62-jrwf;GHSA-pmwg-cvhr-8vh7;GHSA-q8qp-cvcw-x6jj;GHSA-vf2m-468p-8v99;GHSA-w9j2-pvgh-6h63;GHSA-xhjh-pmcv-23jw;GHSA-xx6v-rp6x-q39c,GHSA-3p68-rc4w-qgx5;GHSA-3w6x-2g7m-8v23;GHSA-43fc-jf86-j433;GHSA-445q-vr5w-6q77;GHSA-5c9x-8gcm-mpgx;GHSA-62hf-57xw-28j9;GHSA-6chq-wfr3-2hj9;GHSA-fvcv-3m26-pcqx;GHSA-m7pr-hjqh-92cm;GHSA-pf86-5x62-jrwf;GHSA-pmwg-cvhr-8vh7;GHSA-q8qp-cvcw-x6jj;GHSA-vf2m-468p-8v99;GHSA-w9j2-pvgh-6h63;GHSA-xhjh-pmcv-23jw;GHSA-xx6v-rp6x-q39c,0.30.3;0.31.0;0.31.1;1.13.5;1.15.0;1.15.1;1.15.2
+@appium/base-driver,@appium/base-driver,lodash,asyncbox,^4.17.4,affected-range-admitted,GHSA-29mw-wpgm-hmr9;GHSA-35jh-r3h4-6jhm;GHSA-4xc9-xhrj-v574;GHSA-f23m-r3pf-42rh;GHSA-fvqr-27wr-82fm;GHSA-jf85-cpcp-j695;GHSA-p6mc-m468-83gw;GHSA-r5fr-rjxr-66jc;GHSA-x5rq-j2xg-h7qm;GHSA-xxjr-mmjv-4gpg,,4.17.5;4.17.11;4.17.12;4.17.19;4.17.21;4.17.23;4.18.0
+@appium/base-driver,@appium/base-driver,lodash,@appium/logger,4.17.21,strict-vulnerable,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,4.17.23;4.18.0
+@appium/base-driver,@appium/base-driver,lodash,@appium/support,4.17.21,strict-vulnerable,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,4.17.23;4.18.0
+@appium/base-driver,@appium/base-driver,lodash,teen_process,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@appium/base-driver,@appium/base-driver,lodash,archiver-utils,^4.17.15,affected-range-admitted,GHSA-29mw-wpgm-hmr9;GHSA-35jh-r3h4-6jhm;GHSA-f23m-r3pf-42rh;GHSA-p6mc-m468-83gw;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.19;4.17.21;4.17.23;4.18.0
+@appium/base-driver,@appium/types,lodash,@appium/logger,4.17.21,strict-vulnerable,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,4.17.23;4.18.0
+@appium/base-driver,@appium/support,lodash,teen_process,^4.17.21,affected-range-admitted,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.23;4.18.0
+@appium/base-driver,@appium/support,lodash,archiver-utils,^4.17.15,affected-range-admitted,GHSA-29mw-wpgm-hmr9;GHSA-35jh-r3h4-6jhm;GHSA-f23m-r3pf-42rh;GHSA-p6mc-m468-83gw;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,,4.17.19;4.17.21;4.17.23;4.18.0
+@appium/base-driver,@appium/support,lodash,@appium/logger,4.17.21,strict-vulnerable,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,4.17.23;4.18.0
+@lerna/version,@lerna/version,tmp,nx,~0.2.1,affected-range-admitted,GHSA-52f5-9888-hmc6,,0.2.4
+@lerna/version,@lerna/version,semver,normalize-package-data,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/version,semver,@npmcli/git,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/version,semver,npm-pick-manifest,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/version,semver,npm-package-arg,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/version,semver,npm-install-checks,^7.1.1,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/version,semver,@npmcli/fs,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/version,semver,node-gyp,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/version,semver,@npmcli/arborist,^7.3.7,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/version,semver,@npmcli/metavuln-calculator,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/version,semver,libnpmpublish,^7.3.7,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/version,minimatch,lerna,3.0.5,strict-vulnerable,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/version,minimatch,glob,^10.1.1,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/version,minimatch,@npmcli/arborist,^10.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/version,minimatch,@tufjs/models,^9.0.5,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/version,minimatch,ignore-walk,^10.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/version,minimatch,@npmcli/map-workspaces,^10.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/version,minimatch,@lerna/create,3.0.5,strict-vulnerable,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/version,minimatch,nx,9.0.3,strict-vulnerable,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/version,minimatch,multimatch,^9.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/version,minimatch,@nx/devkit,9.0.3,strict-vulnerable,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/version,minimatch,filelist,^5.0.1,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/version,tar,lerna,6.2.1,strict-vulnerable,GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,7.5.3;7.5.4;7.5.7;7.5.8;7.5.10;7.5.11
+@lerna/version,@lerna/version,tar,node-gyp,^7.5.2,affected-range-admitted,GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,,7.5.3;7.5.4;7.5.7;7.5.8;7.5.10;7.5.11
+@lerna/version,@lerna/version,tar,pacote,^7.4.3,affected-range-admitted,GHSA-29xp-372q-xqph;GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,,7.5.2;7.5.3;7.5.4;7.5.7;7.5.8;7.5.10;7.5.11
+@lerna/version,@lerna/version,tar,@lerna/create,6.2.1,strict-vulnerable,GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,7.5.3;7.5.4;7.5.7;7.5.8;7.5.10;7.5.11
+@lerna/version,@lerna/version,uuid,lerna,^11.1.0,affected-range-admitted,GHSA-w5hq-g745-h8pq,,11.1.1;12.0.1;13.0.1
+@lerna/version,@lerna/version,uuid,@lerna/create,^11.1.0,affected-range-admitted,GHSA-w5hq-g745-h8pq,,11.1.1;12.0.1;13.0.1
+@lerna/version,lerna,tmp,nx,~0.2.1,affected-range-admitted,GHSA-52f5-9888-hmc6,,0.2.4
+@lerna/version,lerna,semver,normalize-package-data,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,lerna,semver,@npmcli/git,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,lerna,semver,npm-pick-manifest,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,lerna,semver,npm-package-arg,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,lerna,semver,npm-install-checks,^7.1.1,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,lerna,semver,@npmcli/fs,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,lerna,semver,node-gyp,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,lerna,semver,@npmcli/arborist,^7.3.7,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,lerna,semver,@npmcli/metavuln-calculator,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,lerna,semver,libnpmpublish,^7.3.7,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,lerna,minimatch,glob,^10.1.1,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,lerna,minimatch,@npmcli/arborist,^10.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,lerna,minimatch,@tufjs/models,^9.0.5,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,lerna,minimatch,ignore-walk,^10.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,lerna,minimatch,@npmcli/map-workspaces,^10.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,lerna,minimatch,@lerna/create,3.0.5,strict-vulnerable,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,lerna,minimatch,nx,9.0.3,strict-vulnerable,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,lerna,minimatch,multimatch,^9.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,lerna,minimatch,@nx/devkit,9.0.3,strict-vulnerable,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,lerna,minimatch,filelist,^5.0.1,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,lerna,tar,node-gyp,^7.5.2,affected-range-admitted,GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,,7.5.3;7.5.4;7.5.7;7.5.8;7.5.10;7.5.11
+@lerna/version,lerna,tar,pacote,^7.4.3,affected-range-admitted,GHSA-29xp-372q-xqph;GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,,7.5.2;7.5.3;7.5.4;7.5.7;7.5.8;7.5.10;7.5.11
+@lerna/version,lerna,tar,@lerna/create,6.2.1,strict-vulnerable,GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,7.5.3;7.5.4;7.5.7;7.5.8;7.5.10;7.5.11
+@lerna/version,lerna,uuid,@lerna/create,^11.1.0,affected-range-admitted,GHSA-w5hq-g745-h8pq,,11.1.1;12.0.1;13.0.1
+@lerna/version,@lerna/create,tmp,nx,~0.2.1,affected-range-admitted,GHSA-52f5-9888-hmc6,,0.2.4
+@lerna/version,@lerna/create,semver,normalize-package-data,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/create,semver,@npmcli/fs,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/create,semver,npm-package-arg,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/create,semver,npm-pick-manifest,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/create,semver,npm-install-checks,^7.1.1,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/create,semver,node-gyp,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/create,semver,@npmcli/git,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/create,semver,libnpmpublish,^7.3.7,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/create,semver,@npmcli/arborist,^7.3.7,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/create,semver,@npmcli/metavuln-calculator,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/version,@lerna/create,minimatch,glob,^10.1.1,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/create,minimatch,@tufjs/models,^9.0.5,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/create,minimatch,ignore-walk,^10.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/create,minimatch,nx,9.0.3,strict-vulnerable,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/create,minimatch,multimatch,^9.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/create,minimatch,@nx/devkit,9.0.3,strict-vulnerable,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/create,minimatch,filelist,^5.0.1,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/create,minimatch,@npmcli/arborist,^10.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/create,minimatch,@npmcli/map-workspaces,^10.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/version,@lerna/create,tar,pacote,^7.4.3,affected-range-admitted,GHSA-29xp-372q-xqph;GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,,7.5.2;7.5.3;7.5.4;7.5.7;7.5.8;7.5.10;7.5.11
+@lerna/version,@lerna/create,tar,node-gyp,^7.5.2,affected-range-admitted,GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,,7.5.3;7.5.4;7.5.7;7.5.8;7.5.10;7.5.11
+@lerna/npm-publish,@lerna/npm-publish,semver,node-gyp,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/npm-publish,@lerna/npm-publish,semver,@npmcli/fs,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/npm-publish,@lerna/npm-publish,semver,@npmcli/git,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/npm-publish,@lerna/npm-publish,semver,npm-pick-manifest,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/npm-publish,@lerna/npm-publish,semver,npm-package-arg,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/npm-publish,@lerna/npm-publish,semver,npm-install-checks,^7.1.1,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/npm-publish,@lerna/npm-publish,semver,normalize-package-data,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/npm-publish,@lerna/npm-publish,semver,libnpmpublish,^7.3.7,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/npm-publish,@lerna/npm-publish,minimatch,glob,^10.1.1,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/npm-publish,@lerna/npm-publish,minimatch,@tufjs/models,^9.0.5,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/npm-publish,@lerna/npm-publish,tar,node-gyp,^7.5.2,affected-range-admitted,GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,,7.5.3;7.5.4;7.5.7;7.5.8;7.5.10;7.5.11
+@lerna/npm-publish,@lerna/npm-publish,ini,config-chain,^1.3.4,affected-range-admitted,GHSA-qqgx-2p2h-9c37,,1.3.6
+@lerna/npm-publish,@lerna/run-lifecycle,semver,node-gyp,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/npm-publish,@lerna/run-lifecycle,semver,@npmcli/fs,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/npm-publish,@lerna/run-lifecycle,semver,@npmcli/git,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/npm-publish,@lerna/run-lifecycle,semver,npm-pick-manifest,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/npm-publish,@lerna/run-lifecycle,semver,npm-package-arg,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/npm-publish,@lerna/run-lifecycle,semver,npm-install-checks,^7.1.1,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/npm-publish,@lerna/run-lifecycle,minimatch,glob,^10.1.1,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/npm-publish,@lerna/run-lifecycle,tar,node-gyp,^7.5.2,affected-range-admitted,GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,,7.5.3;7.5.4;7.5.7;7.5.8;7.5.10;7.5.11
+@lerna/npm-publish,@lerna/run-lifecycle,ini,config-chain,^1.3.4,affected-range-admitted,GHSA-qqgx-2p2h-9c37,,1.3.6
+@lerna/npm-publish,@lerna/npm-conf,ini,config-chain,^1.3.4,affected-range-admitted,GHSA-qqgx-2p2h-9c37,,1.3.6
+@lerna/query-graph,@lerna/query-graph,semver,@lerna/package-graph,^7.3.4,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/query-graph,@lerna/query-graph,semver,@lerna/prerelease-id-from-version,^7.3.4,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/query-graph,@lerna/query-graph,semver,npm-package-arg,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/query-graph,@lerna/package-graph,semver,@lerna/prerelease-id-from-version,^7.3.4,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/query-graph,@lerna/package-graph,semver,npm-package-arg,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+vite-plugin-pwa,vite-plugin-pwa,rollup,workbox-build,^2.79.2,affected-range-admitted,GHSA-mw96-cpmx-2vgc,,2.80.0;3.30.0;4.59.0
+@appium/types,@appium/types,lodash,@appium/logger,4.17.21,strict-vulnerable,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,GHSA-f23m-r3pf-42rh;GHSA-r5fr-rjxr-66jc;GHSA-xxjr-mmjv-4gpg,4.17.23;4.18.0
+@lerna/create,@lerna/create,tmp,nx,~0.2.1,affected-range-admitted,GHSA-52f5-9888-hmc6,,0.2.4
+@lerna/create,@lerna/create,semver,normalize-package-data,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/create,@lerna/create,semver,@npmcli/fs,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/create,@lerna/create,semver,npm-package-arg,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/create,@lerna/create,semver,npm-pick-manifest,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/create,@lerna/create,semver,npm-install-checks,^7.1.1,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/create,@lerna/create,semver,node-gyp,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/create,@lerna/create,semver,@npmcli/git,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/create,@lerna/create,semver,libnpmpublish,^7.3.7,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/create,@lerna/create,semver,@npmcli/arborist,^7.3.7,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/create,@lerna/create,semver,@npmcli/metavuln-calculator,^7.3.5,affected-range-admitted,GHSA-c2qf-rxjj-qqgw,,5.7.2;6.3.1;7.5.2
+@lerna/create,@lerna/create,minimatch,glob,^10.1.1,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/create,@lerna/create,minimatch,@tufjs/models,^9.0.5,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/create,@lerna/create,minimatch,ignore-walk,^10.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/create,@lerna/create,minimatch,nx,9.0.3,strict-vulnerable,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/create,@lerna/create,minimatch,multimatch,^9.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/create,@lerna/create,minimatch,@nx/devkit,9.0.3,strict-vulnerable,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/create,@lerna/create,minimatch,filelist,^5.0.1,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/create,@lerna/create,minimatch,@npmcli/arborist,^10.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/create,@lerna/create,minimatch,@npmcli/map-workspaces,^10.0.3,affected-range-admitted,GHSA-23c5-xmqv-rm74;GHSA-3ppc-4f35-3m26;GHSA-7r86-cg39-jmmj,,3.1.3;3.1.4;4.2.4;4.2.5;5.1.7;5.1.8;6.2.1;6.2.2;7.4.7;7.4.8;8.0.5;8.0.6;9.0.6;9.0.7;10.2.1;10.2.3
+@lerna/create,@lerna/create,tar,pacote,^7.4.3,affected-range-admitted,GHSA-29xp-372q-xqph;GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,,7.5.2;7.5.3;7.5.4;7.5.7;7.5.8;7.5.10;7.5.11
+@lerna/create,@lerna/create,tar,node-gyp,^7.5.2,affected-range-admitted,GHSA-34x7-hfp2-rc4v;GHSA-83g3-92jg-28cx;GHSA-8qq5-rm4j-mr97;GHSA-9ppj-qmqm-q256;GHSA-qffp-2rhf-9h96;GHSA-r6q2-hw4h-h46w,,7.5.3;7.5.4;7.5.7;7.5.8;7.5.10;7.5.11

@@ -1,4 +1,4 @@
-import { execSync } from "child_process";
+import { execFileSync } from "child_process";
 import depcheck from "depcheck";
 
 async function main() {
@@ -14,7 +14,7 @@ async function main() {
   const workDir = "/workspace";
 
   try {
-    execSync(`git clone --depth=1 ${repoUrl} ${workDir}`, {
+    execFileSync("git", ["clone", "--depth=1", repoUrl, workDir], {
       stdio: "ignore",
     });
 

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <rect width="100%" height="100%" fill="white"/>
+  <text x="450" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700">External phantom counts per npm seed closure</text>
+  <line x1="72" y1="382" x2="872" y2="382" stroke="#222"/>
+  <line x1="72" y1="52" x2="72" y2="382" stroke="#222"/>
+  
+      <rect x="72" y="52" width="94.75" height="330" fill="#20bf6b" />
+      <text x="119.375" y="400" text-anchor="end" transform="rotate(-38 119.375 400)" font-size="11">0</text>
+      <text x="119.375" y="47" text-anchor="middle" font-size="11">973</text>
+
+      <rect x="172.75" y="378.9475847893114" width="94.75" height="3.052415210688592" fill="#20bf6b" />
+      <text x="220.125" y="400" text-anchor="end" transform="rotate(-38 220.125 400)" font-size="11">1</text>
+      <text x="220.125" y="373.9475847893114" text-anchor="middle" font-size="11">9</text>
+
+      <rect x="273.5" y="378.60842754367934" width="94.75" height="3.3915724563206577" fill="#20bf6b" />
+      <text x="320.875" y="400" text-anchor="end" transform="rotate(-38 320.875 400)" font-size="11">2-5</text>
+      <text x="320.875" y="373.60842754367934" text-anchor="middle" font-size="11">10</text>
+
+      <rect x="374.25" y="380.64337101747174" width="94.75" height="1.3566289825282631" fill="#20bf6b" />
+      <text x="421.625" y="400" text-anchor="end" transform="rotate(-38 421.625 400)" font-size="11">6-10</text>
+      <text x="421.625" y="375.64337101747174" text-anchor="middle" font-size="11">4</text>
+
+      <rect x="475" y="381.66084275436793" width="94.75" height="0.3391572456320658" fill="#20bf6b" />
+      <text x="522.375" y="400" text-anchor="end" transform="rotate(-38 522.375 400)" font-size="11">11-25</text>
+      <text x="522.375" y="376.66084275436793" text-anchor="middle" font-size="11">1</text>
+
+      <rect x="575.75" y="381.66084275436793" width="94.75" height="0.3391572456320658" fill="#20bf6b" />
+      <text x="623.125" y="400" text-anchor="end" transform="rotate(-38 623.125 400)" font-size="11">26-50</text>
+      <text x="623.125" y="376.66084275436793" text-anchor="middle" font-size="11">1</text>
+
+      <rect x="676.5" y="381.32168550873587" width="94.75" height="0.6783144912641316" fill="#20bf6b" />
+      <text x="723.875" y="400" text-anchor="end" transform="rotate(-38 723.875 400)" font-size="11">51-100</text>
+      <text x="723.875" y="376.32168550873587" text-anchor="middle" font-size="11">2</text>
+
+      <rect x="777.25" y="382" width="94.75" height="0" fill="#20bf6b" />
+      <text x="824.625" y="400" text-anchor="end" transform="rotate(-38 824.625 400)" font-size="11">101+</text>
+      <text x="824.625" y="377" text-anchor="middle" font-size="11">0</text>
+</svg>

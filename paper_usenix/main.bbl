@@ -1,0 +1,64 @@
+\begin{thebibliography}{10}
+
+\bibitem{alfadel2023python}
+Mahmoud Alfadel, Diego~Elias Costa, and Emad Shihab.
+\newblock Empirical analysis of security vulnerabilities in python packages.
+\newblock {\em Empirical Software Engineering}, 28(3):59, 2023.
+
+\bibitem{chainfuzz2025}
+Peng Deng, Lei Zhang, Yuchuan Meng, Zhemin Yang, Yuan Zhang, and Min Yang.
+\newblock Chainfuzz: Exploiting upstream vulnerabilities in open-source supply
+  chains.
+\newblock In {\em 34th USENIX Security Symposium}, 2025.
+
+\bibitem{depcheck}
+{depcheck contributors}.
+\newblock depcheck.
+\newblock \url{https://github.com/depcheck/depcheck}, 2026.
+\newblock Used for JavaScript static dependency-use analysis.
+
+\bibitem{pep770}
+Seth~Michael Larson.
+\newblock {PEP} 770: Improving measurability of python packages with software
+  bill-of-materials.
+\newblock Python Enhancement Proposals, 2025.
+\newblock Accessed 2026-05-24.
+
+\bibitem{liu2022dependencytrees}
+Chengwei Liu, Sen Chen, Lingling Fan, Bihuan Chen, Yang Liu, and Xin Peng.
+\newblock Demystifying the vulnerability propagation and its evolution via
+  dependency trees in the npm ecosystem.
+\newblock In {\em 44th International Conference on Software Engineering}, pages
+  672--684, 2022.
+
+\bibitem{osv}
+{Open Source Vulnerabilities}.
+\newblock {OSV}: Open source vulnerability database.
+\newblock \url{https://osv.dev/}, 2026.
+\newblock Queried 2026-05-24.
+
+\bibitem{endor2023phantom}
+Anand Sawant.
+\newblock Dependency resolution in python: Beware the phantom dependency.
+\newblock Endor Labs, 2023.
+\newblock Accessed 2026-05-24.
+
+\bibitem{duress2023}
+Xueqiang Wang, Yifan Zhang, XiaoFeng Wang, Yan Jia, and Luyi Xing.
+\newblock Union under duress: Understanding hazards of duplicate resource
+  mismediation in android software supply chain.
+\newblock In {\em 32nd USENIX Security Symposium}, 2023.
+
+\bibitem{zerouali2022impact}
+Ahmed Zerouali, Tom Mens, Alexandre Decan, and Coen De~Roover.
+\newblock On the impact of security vulnerabilities in the npm and rubygems
+  dependency networks.
+\newblock {\em Empirical Software Engineering}, 27(5):107, 2022.
+
+\bibitem{zimmermann2019smallworld}
+Markus Zimmermann, Cristian-Alexandru Staicu, Cam Tenny, and Michael Pradel.
+\newblock Small world with high risks: A study of security threats in the npm
+  ecosystem.
+\newblock In {\em 28th USENIX Security Symposium}, 2019.
+
+\end{thebibliography}

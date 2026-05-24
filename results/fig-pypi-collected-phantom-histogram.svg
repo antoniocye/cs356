@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <rect width="100%" height="100%" fill="white"/>
+  <text x="450" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700">PyPI phantom counts per successful package analysis</text>
+  <line x1="72" y1="382" x2="872" y2="382" stroke="#222"/>
+  <line x1="72" y1="52" x2="72" y2="382" stroke="#222"/>
+  
+      <rect x="72" y="78.28318584070797" width="128.33333333333334" height="303.716814159292" fill="#2bcbba" />
+      <text x="136.16666666666669" y="400" text-anchor="end" transform="rotate(-38 136.16666666666669 400)" font-size="11">0</text>
+      <text x="136.16666666666669" y="73.28318584070797" text-anchor="middle" font-size="11">208</text>
+
+      <rect x="206.33333333333334" y="136.69026548672565" width="128.33333333333334" height="245.30973451327435" fill="#2bcbba" />
+      <text x="270.5" y="400" text-anchor="end" transform="rotate(-38 270.5 400)" font-size="11">1</text>
+      <text x="270.5" y="131.69026548672565" text-anchor="middle" font-size="11">168</text>
+
+      <rect x="340.6666666666667" y="52" width="128.33333333333334" height="330" fill="#2bcbba" />
+      <text x="404.83333333333337" y="400" text-anchor="end" transform="rotate(-38 404.83333333333337 400)" font-size="11">2-5</text>
+      <text x="404.83333333333337" y="47" text-anchor="middle" font-size="11">226</text>
+
+      <rect x="475" y="268.1061946902655" width="128.33333333333334" height="113.8938053097345" fill="#2bcbba" />
+      <text x="539.1666666666666" y="400" text-anchor="end" transform="rotate(-38 539.1666666666666 400)" font-size="11">6-10</text>
+      <text x="539.1666666666666" y="263.1061946902655" text-anchor="middle" font-size="11">78</text>
+
+      <rect x="609.3333333333334" y="256.42477876106193" width="128.33333333333334" height="125.57522123893804" fill="#2bcbba" />
+      <text x="673.5" y="400" text-anchor="end" transform="rotate(-38 673.5 400)" font-size="11">11-25</text>
+      <text x="673.5" y="251.42477876106193" text-anchor="middle" font-size="11">86</text>
+
+      <rect x="743.6666666666667" y="330.8938053097345" width="128.33333333333334" height="51.10619469026548" fill="#2bcbba" />
+      <text x="807.8333333333334" y="400" text-anchor="end" transform="rotate(-38 807.8333333333334 400)" font-size="11">26+</text>
+      <text x="807.8333333333334" y="325.8938053097345" text-anchor="middle" font-size="11">35</text>
+</svg>

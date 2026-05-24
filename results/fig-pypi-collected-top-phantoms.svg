@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520">
+  <rect width="100%" height="100%" fill="white"/>
+  <text x="460" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700">Top PyPI phantom packages in collected dataset</text>
+  <line x1="72" y1="402" x2="892" y2="402" stroke="#222"/>
+  <line x1="72" y1="52" x2="72" y2="402" stroke="#222"/>
+  
+      <rect x="72" y="52" width="49.06666666666667" height="350" fill="#8854d0" />
+      <text x="96.53333333333333" y="420" text-anchor="end" transform="rotate(-38 96.53333333333333 420)" font-size="11">typing-extensions</text>
+      <text x="96.53333333333333" y="47" text-anchor="middle" font-size="11">113</text>
+
+      <rect x="127.06666666666666" y="209.96460176991152" width="49.06666666666667" height="192.03539823008848" fill="#8854d0" />
+      <text x="151.6" y="420" text-anchor="end" transform="rotate(-38 151.6 420)" font-size="11">requests</text>
+      <text x="151.6" y="204.96460176991152" text-anchor="middle" font-size="11">62</text>
+
+      <rect x="182.13333333333333" y="262.6194690265487" width="49.06666666666667" height="139.38053097345133" fill="#8854d0" />
+      <text x="206.66666666666666" y="420" text-anchor="end" transform="rotate(-38 206.66666666666666 420)" font-size="11">numpy</text>
+      <text x="206.66666666666666" y="257.6194690265487" text-anchor="middle" font-size="11">45</text>
+
+      <rect x="237.20000000000002" y="265.716814159292" width="49.06666666666667" height="136.28318584070797" fill="#8854d0" />
+      <text x="261.73333333333335" y="420" text-anchor="end" transform="rotate(-38 261.73333333333335 420)" font-size="11">packaging</text>
+      <text x="261.73333333333335" y="260.716814159292" text-anchor="middle" font-size="11">44</text>
+
+      <rect x="292.26666666666665" y="268.8141592920354" width="49.06666666666667" height="133.1858407079646" fill="#8854d0" />
+      <text x="316.8" y="420" text-anchor="end" transform="rotate(-38 316.8 420)" font-size="11">ipython</text>
+      <text x="316.8" y="263.8141592920354" text-anchor="middle" font-size="11">43</text>
+
+      <rect x="347.33333333333337" y="278.1061946902655" width="49.06666666666667" height="123.89380530973452" fill="#8854d0" />
+      <text x="371.86666666666673" y="420" text-anchor="end" transform="rotate(-38 371.86666666666673 420)" font-size="11">jinja2</text>
+      <text x="371.86666666666673" y="273.1061946902655" text-anchor="middle" font-size="11">40</text>
+
+      <rect x="402.40000000000003" y="281.20353982300884" width="49.06666666666667" height="120.79646017699115" fill="#8854d0" />
+      <text x="426.9333333333334" y="420" text-anchor="end" transform="rotate(-38 426.9333333333334 420)" font-size="11">pyyaml</text>
+      <text x="426.9333333333334" y="276.20353982300884" text-anchor="middle" font-size="11">39</text>
+
+      <rect x="457.4666666666667" y="287.39823008849555" width="49.06666666666667" height="114.60176991150443" fill="#8854d0" />
+      <text x="482.00000000000006" y="420" text-anchor="end" transform="rotate(-38 482.00000000000006 420)" font-size="11">pydantic-core</text>
+      <text x="482.00000000000006" y="282.39823008849555" text-anchor="middle" font-size="11">37</text>
+
+      <rect x="512.5333333333333" y="290.49557522123894" width="49.06666666666667" height="111.50442477876106" fill="#8854d0" />
+      <text x="537.0666666666666" y="420" text-anchor="end" transform="rotate(-38 537.0666666666666 420)" font-size="11">tomli</text>
+      <text x="537.0666666666666" y="285.49557522123894" text-anchor="middle" font-size="11">36</text>
+
+      <rect x="567.6" y="290.49557522123894" width="49.06666666666667" height="111.50442477876106" fill="#8854d0" />
+      <text x="592.1333333333333" y="420" text-anchor="end" transform="rotate(-38 592.1333333333333 420)" font-size="11">urllib3</text>
+      <text x="592.1333333333333" y="285.49557522123894" text-anchor="middle" font-size="11">36</text>
+
+      <rect x="622.6666666666667" y="302.88495575221236" width="49.06666666666667" height="99.11504424778761" fill="#8854d0" />
+      <text x="647.2" y="420" text-anchor="end" transform="rotate(-38 647.2 420)" font-size="11">psutil</text>
+      <text x="647.2" y="297.88495575221236" text-anchor="middle" font-size="11">32</text>
+
+      <rect x="677.7333333333333" y="312.17699115044246" width="49.06666666666667" height="89.82300884955752" fill="#8854d0" />
+      <text x="702.2666666666667" y="420" text-anchor="end" transform="rotate(-38 702.2666666666667 420)" font-size="11">botocore</text>
+      <text x="702.2666666666667" y="307.17699115044246" text-anchor="middle" font-size="11">29</text>
+
+      <rect x="732.8000000000001" y="315.27433628318585" width="49.06666666666667" height="86.72566371681415" fill="#8854d0" />
+      <text x="757.3333333333334" y="420" text-anchor="end" transform="rotate(-38 757.3333333333334 420)" font-size="11">pyjwt</text>
+      <text x="757.3333333333334" y="310.27433628318585" text-anchor="middle" font-size="11">28</text>
+
+      <rect x="787.8666666666667" y="318.3716814159292" width="49.06666666666667" height="83.6283185840708" fill="#8854d0" />
+      <text x="812.4" y="420" text-anchor="end" transform="rotate(-38 812.4 420)" font-size="11">langchain-core</text>
+      <text x="812.4" y="313.3716814159292" text-anchor="middle" font-size="11">27</text>
+
+      <rect x="842.9333333333334" y="318.3716814159292" width="49.06666666666667" height="83.6283185840708" fill="#8854d0" />
+      <text x="867.4666666666667" y="420" text-anchor="end" transform="rotate(-38 867.4666666666667 420)" font-size="11">pandas</text>
+      <text x="867.4666666666667" y="313.3716814159292" text-anchor="middle" font-size="11">27</text>
+</svg>

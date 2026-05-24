@@ -1,10 +1,9 @@
 import depcheck from 'depcheck';
 import path from 'path';
-import { execSync } from 'child_process';
+import { execFileSync } from 'child_process';
 import { debug_mode, download_count_start, download_count_end } from '../config.js'
 // import { db } from '../database.js'
-import names from "all-the-package-names" assert { type: 'json' };
-import fs from 'fs'
+import { normalizeRepoUrl } from '../src/repo-url.js';
 
 const threshold = 10000; // minimum downloads to consider
 
@@ -31,7 +30,7 @@ async function fetchMetadataWithRetries(url, options = {}, retries = 3, delayMs 
 }
 
 
-async function fetchDownloadsWithRetries(package_name, options = {}, retries = 3){
+async function fetchDownloadsWithRetries(package_name, options = {}, retries = 3, delayMs = 1000){
     let url = `https://api.npmjs.org/downloads/range/${download_count_start}:${download_count_end}/${package_name}`; // provide start and end dates as a string in format yyyy-mm-yy
 
     for (let attempt = 1; attempt <= retries; attempt++) {
@@ -43,8 +42,8 @@ async function fetchDownloadsWithRetries(package_name, options = {}, retries = 3
             if(debug_mode){
                 console.warn(`Attempt ${attempt} failed: ${err.message}`);
                 if (attempt === retries) throw err;
-                await new Promise(resolve => setTimeout(resolve, delayMs));
             }
+            await new Promise(resolve => setTimeout(resolve, delayMs));
         }
     }
     return null;
@@ -139,34 +138,17 @@ export async function add_to_db(package_name){
             if ("homepage" in metadata) {
                 console.log("Github link may be at 'homepage'. Here's given homepage:", metadata["homepage"]);
                 // try to work with the homepage
-                repo_given = metadata["homepage"];
-                if (repo_given.slice(0, 19) == "https://github.com/") {
-                    repo_given = repo_given.replace(/#.*$/, ""); // remove the # tags to the given link
-                }
-                else {
-                    return 0;
-                }
+                repo_given = normalizeRepoUrl(metadata["homepage"]);
             }
             else {
                 return 0;
             }
         }
+        else {
+            repo_given = normalizeRepoUrl(metadata["repository"]["url"]);
+        }
 
-        repo_given = metadata["repository"]["url"];
         if (!repo_given) {
-            return 0;
-        }
-        if (repo_given.slice(0, 9) == "git+https") {
-            repo_given = repo_given.slice(4);
-        }
-        else if (repo_given.slice(0, 3) == "git" && repo_given.slice(3, 12) == "://github") {
-            repo_given = "https" + repo_given.slice(3);
-        }
-        else if (repo_given.slice(0, 7) == "git+ssh" && repo_given.slice(7, 12) == "://git@github") {
-            repo_given = "https" + repo_given.slice(7);
-        }
-        else if (repo_given.slice(0, 5) != "https") {
-            console.log("Doesn't fit in current model:", repo_given);
             return 0;
         }
 
@@ -179,12 +161,12 @@ export async function add_to_db(package_name){
 
         try {
             if (debug_mode) {
-                execSync(`git clone --depth=1 ${repo_given} ${workDir}`, { stdio: 'inherit' });
-                execSync('npm install --ignore-scripts', { cwd: workDir, stdio: 'inherit' });
+                execFileSync('git', ['clone', '--depth=1', repo_given, workDir], { stdio: 'inherit' });
+                execFileSync('npm', ['install', '--ignore-scripts'], { cwd: workDir, stdio: 'inherit' });
             }
             else {
-                execSync(`git clone --depth=1 ${repo_given} ${workDir}`, { stdio: 'ignore' });
-                execSync('npm install --ignore-scripts', { cwd: workDir, stdio: 'ignore' });
+                execFileSync('git', ['clone', '--depth=1', repo_given, workDir], { stdio: 'ignore' });
+                execFileSync('npm', ['install', '--ignore-scripts'], { cwd: workDir, stdio: 'ignore' });
             }
         
         }

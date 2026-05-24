@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-05-24T09:56:12.711Z",
+  "inputs": {
+    "dbFile": "database_manager_npm/database.json",
+    "occurrencesFile": "results/external-phantom-occurrences.csv",
+    "rollbackFile": "results/rollback-candidates.csv",
+    "onlySeedsWithVulnerablePhantoms": true,
+    "seedCount": 19,
+    "occurrenceRows": 105
+  },
+  "validation": {
+    "installFailures": 0,
+    "rowsValidated": 105,
+    "reachableRows": 102,
+    "reachableSeeds": 19,
+    "observedAffectedRows": 18,
+    "observedAffectedSeeds": 5,
+    "strictRollbackReachableRows": 15,
+    "strictRollbackReachableSeeds": 6,
+    "weakRollbackReachableRows": 53,
+    "weakRollbackReachableSeeds": 14
+  }
+}

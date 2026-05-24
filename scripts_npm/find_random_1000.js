@@ -1,7 +1,8 @@
-import names from "all-the-package-names" assert { type: 'json' };
 import fs from 'fs'
 import { count_downloads } from "./util.js";
+import { loadAllNpmPackageNames } from "../src/package-names.js";
 
+const names = loadAllNpmPackageNames();
 
 export async function find_random_1000(file_name) {
   const chosenIndices = [];
@@ -18,4 +19,6 @@ export async function find_random_1000(file_name) {
   }
   fs.writeFileSync(file_name, JSON.stringify(chosen, null, 2));
 }
-await find_random_1000("../output_file_random_1000/random1000.json");
+if (import.meta.url === `file://${process.argv[1]}`) {
+  await find_random_1000("../output_file_random_1000/random1000.json");
+}
